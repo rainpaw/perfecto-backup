@@ -1,0 +1,622 @@
+-------------------- Log Start | Tue Dec 19 00:34:25 2023 --------------------
+data_path: /home/pi/printer_data
+is_default_data_path: False
+config_file: /home/pi/printer_data/config/moonraker.conf
+startup_warnings: []
+verbose: False
+debug: False
+asyncio_debug: False
+is_backup_config: False
+is_python_package: False
+instance_uuid: cb39e7ae7c2a46c4be0d71bc030b893a
+unix_socket_path: /home/pi/printer_data/comms/moonraker.sock
+software_version: v0.8.0-207-g6d8cb76
+git_branch: master
+git_remote: origin
+git_repo_url: https://github.com/Arksine/moonraker.git
+modified_files: []
+unofficial_components: []
+log_file: /home/pi/printer_data/logs/moonraker.log
+python_version: 3.9.2 (default, Mar 12 2021, 04:06:34)  [GCC 10.2.1 20210110]
+msgspec_enabled: False
+uvloop_enabled: False
+
+#################### Moonraker Configuration ####################
+
+[server]
+host = 0.0.0.0
+port = 7125
+klippy_uds_address = /home/pi/printer_data/comms/klippy.sock
+
+[authorization]
+trusted_clients = 
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.0.0/16
+	FE80::/10
+	::1/128
+cors_domains = 
+	*.lan
+	*.local
+	*://localhost
+	*://localhost:*
+	*://my.mainsail.xyz
+	*://app.fluidd.xyz
+
+[file_manager]
+enable_object_processing = True
+
+[octoprint_compat]
+
+[history]
+
+[update_manager]
+channel = dev
+refresh_interval = 168
+
+[update_manager mainsail-config]
+type = git_repo
+primary_branch = master
+path = ~/mainsail-config
+origin = https://github.com/mainsail-crew/mainsail-config.git
+managed_services = klipper
+
+[update_manager mainsail]
+type = web
+channel = stable
+repo = mainsail-crew/mainsail
+path = ~/mainsail
+
+[update_manager octoeverywhere]
+type = git_repo
+channel = beta
+path = /home/pi/octoeverywhere
+origin = https://github.com/QuinnDamerell/OctoPrint-OctoEverywhere.git
+env = /home/pi/octoeverywhere-env/bin/python
+requirements = requirements.txt
+install_script = install.sh
+managed_services = 
+	octoeverywhere
+
+[announcements]
+subscriptions = 
+	octoeverywhere
+
+[update_manager crowsnest]
+type = git_repo
+path = ~/crowsnest
+origin = https://github.com/mainsail-crew/crowsnest.git
+managed_services = crowsnest
+install_script = tools/pkglist.sh
+
+[update_manager Klipper-Adaptive-Meshing-Purging]
+type = git_repo
+channel = dev
+path = ~/Klipper-Adaptive-Meshing-Purging
+origin = https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging.git
+managed_services = klipper
+primary_branch = main
+
+#################################################################
+All Configuration Files:
+/home/pi/printer_data/config/moonraker.conf
+/home/pi/printer_data/config/octoeverywhere-system.cfg
+#################################################################
+Unsafe Shutdown Count: 10
+
+System Info:
+
+***python***
+  version: (3, 9, 2, 'final', 0)
+  version_string: 3.9.2 (default, Mar 12 2021, 04:06:34)  [GCC 10.2.1 20210110]
+
+***cpu_info***
+  cpu_count: 4
+  bits: 32bit
+  processor: armv7l
+  cpu_desc: ARMv7 Processor rev 4 (v7l)
+  serial_number: 1fdc2c7d
+  hardware_desc: BCM2835
+  model: Raspberry Pi 3 Model B Rev 1.2
+  total_memory: 858832
+  memory_units: kB
+
+***sd_info***
+  manufacturer_id: 03
+  manufacturer: Sandisk
+  oem_id: 5344
+  product_name: SC16G
+  product_revision: 8.0
+  serial_number: 6146366b
+  manufacturer_date: 9/2017
+  capacity: 14.8 GiB
+  total_bytes: 15931539456
+
+***distribution***
+  name: Raspbian GNU/Linux 11 (bullseye)
+  id: raspbian
+  version: 11
+  version_parts: {'major': '11', 'minor': '', 'build_number': ''}
+  like: debian
+  codename: bullseye
+  release_info: {}
+
+***virtualization***
+  virt_type: none
+  virt_identifier: none
+
+***network***
+
+***canbus***
+
+***Allowed Services***
+  klipper_mcu
+  webcamd
+  MoonCord
+  KlipperScreen
+  moonraker-telegram-bot
+  moonraker-obico
+  sonar
+  crowsnest
+  octoeverywhere
+  ratos-configurator
+
+Systemd unit moonraker.service:
+unit_name: moonraker.service
+is_default: True
+manager: systemd
+Properties:
+**Requires=['-.mount', 'system.slice', 'network-online.target', 'sysinit.target']
+**After=['-.mount', 'system.slice', 'network-online.target', 'sysinit.target', 'systemd-journald.socket', 'basic.target']
+**SupplementaryGroups=['moonraker-admin']
+**EnvironmentFiles=/home/pi/printer_data/systemd/moonraker.env
+**ExecStart=/home/pi/moonraker-env/bin/python $MOONRAKER_ARGS
+**WorkingDirectory=/home/pi/moonraker
+**FragmentPath=/etc/systemd/system/moonraker.service
+**Description=API Server for Klipper SV1
+**User=pi
+
+Systemd unit klipper.service:
+unit_name: klipper.service
+is_default: True
+manager: systemd
+Properties:
+**Requires=['system.slice', '-.mount', 'sysinit.target']
+**After=['-.mount', 'system.slice', 'network-online.target', 'sysinit.target', 'systemd-journald.socket', 'basic.target']
+**SupplementaryGroups=[]
+**EnvironmentFiles=/home/pi/printer_data/systemd/klipper.env
+**ExecStart=/home/pi/klippy-env/bin/python $KLIPPER_ARGS
+**WorkingDirectory=/home/pi/klipper
+**FragmentPath=/etc/systemd/system/klipper.service
+**Description=Klipper 3D Printer Firmware SV1
+**User=pi
+Git Repo moonraker: No warnings detected
+Git Repo klipper: No warnings detected
+Git Repo mainsail-config: No warnings detected
+Git Repo octoeverywhere: No warnings detected
+Git Repo crowsnest: No warnings detected
+Git Repo Klipper-Adaptive-Meshing-Purging: No warnings detected
+Klipper Version: v0.12.0-32-gf0753bd3
+2023-12-19 00:34:25,851 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.2.251
+2023-12-19 00:34:43,521 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.2.131
+2023-12-19 00:34:43,524 [app.py:log_request()] - 101 GET /websocket (192.168.2.131) [_TRUSTED_USER_] 8.03ms
+2023-12-19 00:34:43,525 [websockets.py:open()] - Websocket Opened: ID: 1727394024, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 00:34:43,567 [app.py:log_request()] - 101 GET /websocket (192.168.2.131) [_TRUSTED_USER_] 5.16ms
+2023-12-19 00:34:43,567 [websockets.py:open()] - Websocket Opened: ID: 1727395872, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 00:34:43,574 [websockets.py:_handle_identify()] - Websocket 1727394024 Client Identified - Name: mainsail, Version: 2.8.0, Type: web
+2023-12-19 00:34:43,603 [websockets.py:_handle_identify()] - Websocket 1727395872 Client Identified - Name: OctoEverywhere-BrowserAgent, Version: 1.0.0, Type: web
+2023-12-19 00:35:07,214 [websockets.py:on_close()] - Websocket Closed: ID: 1727395872 Close Code: None, Close Reason: None, Pong Time Elapsed: 3.64
+2023-12-19 00:35:07,220 [websockets.py:on_close()] - Websocket Closed: ID: 1727394024 Close Code: None, Close Reason: None, Pong Time Elapsed: 3.67
+2023-12-19 00:35:58,429 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2023-12-19 00:35:58,432 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://127.0.0.1
+2023-12-19 00:36:04,084 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.database.get_item, Code: -32601, Message: Namespace 'webcams' not found
+2023-12-19 00:36:08,431 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 00:36:08,433 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.2.180
+2023-12-19 01:12:52,260 [app.py:log_request()] - 404 GET /server/files/gcodes/.thumbs/TripleTrap+J-32x32.png?timestamp=1702911427126 (192.168.2.251) [No User] 10.48ms
+2023-12-19 01:12:52,266 [app.py:log_request()] - 404 GET /server/files/gcodes/.thumbs/TripleTrap+J-400x300.png?timestamp=1702911427.1262996 (192.168.2.251) [No User] 12.06ms
+2023-12-19 01:12:52,557 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.2.251
+2023-12-19 01:12:52,560 [app.py:log_request()] - 101 GET /websocket (192.168.2.251) [_TRUSTED_USER_] 10.34ms
+2023-12-19 01:12:52,561 [websockets.py:open()] - Websocket Opened: ID: 1727482080, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 01:12:52,565 [app.py:log_request()] - 101 GET /websocket (192.168.2.251) [_TRUSTED_USER_] 10.27ms
+2023-12-19 01:12:52,566 [websockets.py:open()] - Websocket Opened: ID: 1727481648, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 01:12:52,597 [websockets.py:_handle_identify()] - Websocket 1727482080 Client Identified - Name: OctoEverywhere-BrowserAgent, Version: 1.0.0, Type: web
+2023-12-19 01:12:52,601 [websockets.py:_handle_identify()] - Websocket 1727481648 Client Identified - Name: mainsail, Version: 2.8.0, Type: web
+2023-12-19 01:17:52,633 [websockets.py:write_to_socket()] - Websocket closed while writing: 1727481648
+2023-12-19 01:17:52,721 [websockets.py:write_to_socket()] - Websocket closed while writing: 1727482080
+2023-12-19 01:17:57,566 [websockets.py:on_close()] - Websocket Closed: ID: 1727482080 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.99
+2023-12-19 01:17:57,570 [websockets.py:on_close()] - Websocket Closed: ID: 1727481648 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.94
+2023-12-19 01:23:47,237 [app.py:log_request()] - 101 GET /websocket (192.168.2.251) [_TRUSTED_USER_] 6.46ms
+2023-12-19 01:23:47,238 [websockets.py:open()] - Websocket Opened: ID: 1746255224, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 01:23:47,252 [websockets.py:_handle_identify()] - Websocket 1746255224 Client Identified - Name: mainsail, Version: 2.8.0, Type: web
+2023-12-19 01:23:51,234 [app.py:log_request()] - 101 GET /websocket (192.168.2.131) [_TRUSTED_USER_] 5.33ms
+2023-12-19 01:23:51,235 [websockets.py:open()] - Websocket Opened: ID: 1746254120, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1.2 Mobile/15E148 Safari/604.1, Host Name: 192.168.2.180
+2023-12-19 01:23:51,280 [websockets.py:_handle_identify()] - Websocket 1746254120 Client Identified - Name: mainsail, Version: 2.8.0, Type: web
+2023-12-19 01:23:51,307 [app.py:log_request()] - 101 GET /websocket (192.168.2.131) [_TRUSTED_USER_] 8.97ms
+2023-12-19 01:23:51,308 [websockets.py:open()] - Websocket Opened: ID: 1727633872, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1.2 Mobile/15E148 Safari/604.1, Host Name: 192.168.2.180
+2023-12-19 01:23:52,835 [websockets.py:_handle_identify()] - Websocket 1727633872 Client Identified - Name: OctoEverywhere-BrowserAgent, Version: 1.0.0, Type: web
+2023-12-19 01:24:03,287 [websockets.py:on_close()] - Websocket Closed: ID: 1746254120 Close Code: None, Close Reason: None, Pong Time Elapsed: 2.04
+2023-12-19 01:24:03,292 [websockets.py:on_close()] - Websocket Closed: ID: 1727633872 Close Code: None, Close Reason: None, Pong Time Elapsed: 1.97
+2023-12-19 01:24:25,389 [app.py:log_request()] - 101 GET /websocket (192.168.2.251) [_TRUSTED_USER_] 8.78ms
+2023-12-19 01:24:25,391 [websockets.py:open()] - Websocket Opened: ID: 1727752584, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 01:24:25,411 [websockets.py:_handle_identify()] - Websocket 1727752584 Client Identified - Name: OctoEverywhere-BrowserAgent, Version: 1.0.0, Type: web
+2023-12-19 01:24:55,951 [websockets.py:write_to_socket()] - Websocket closed while writing: 1727752584
+2023-12-19 01:25:00,394 [websockets.py:on_close()] - Websocket Closed: ID: 1727752584 Close Code: None, Close Reason: None, Pong Time Elapsed: 35.01
+2023-12-19 01:26:44,201 [app.py:log_request()] - 101 GET /websocket (192.168.2.131) [_TRUSTED_USER_] 5.90ms
+2023-12-19 01:26:44,202 [websockets.py:open()] - Websocket Opened: ID: 1727750808, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1.2 Mobile/15E148 Safari/604.1, Host Name: 192.168.2.180
+2023-12-19 01:26:44,261 [app.py:log_request()] - 101 GET /websocket (192.168.2.131) [_TRUSTED_USER_] 5.33ms
+2023-12-19 01:26:44,262 [websockets.py:open()] - Websocket Opened: ID: 1727751048, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1.2 Mobile/15E148 Safari/604.1, Host Name: 192.168.2.180
+2023-12-19 01:26:45,337 [websockets.py:_handle_identify()] - Websocket 1727750808 Client Identified - Name: OctoEverywhere-BrowserAgent, Version: 1.0.0, Type: web
+2023-12-19 01:26:45,349 [websockets.py:_handle_identify()] - Websocket 1727751048 Client Identified - Name: mainsail, Version: 2.8.0, Type: web
+2023-12-19 01:26:45,383 [app.py:log_request()] - 101 GET /websocket (192.168.2.131) [_TRUSTED_USER_] 6.16ms
+2023-12-19 01:26:45,384 [websockets.py:open()] - Websocket Opened: ID: 1746254240, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 01:26:45,394 [app.py:log_request()] - 101 GET /websocket (192.168.2.131) [_TRUSTED_USER_] 4.49ms
+2023-12-19 01:26:45,395 [websockets.py:open()] - Websocket Opened: ID: 1746254528, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 01:26:46,412 [websockets.py:_handle_identify()] - Websocket 1746254240 Client Identified - Name: OctoEverywhere-BrowserAgent, Version: 1.0.0, Type: web
+2023-12-19 01:26:46,413 [websockets.py:_handle_identify()] - Websocket 1746254528 Client Identified - Name: mainsail, Version: 2.8.0, Type: web
+2023-12-19 01:28:17,295 [websockets.py:write_to_socket()] - Websocket closed while writing: 1746255224
+2023-12-19 01:28:22,242 [websockets.py:on_close()] - Websocket Closed: ID: 1746255224 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.98
+2023-12-19 01:28:27,795 [app.py:log_request()] - 101 GET /websocket (192.168.2.251) [_TRUSTED_USER_] 6.34ms
+2023-12-19 01:28:27,796 [websockets.py:open()] - Websocket Opened: ID: 1746255344, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 01:28:27,810 [websockets.py:_handle_identify()] - Websocket 1746255344 Client Identified - Name: mainsail, Version: 2.8.0, Type: web
+2023-12-19 01:29:37,873 [websockets.py:write_to_socket()] - Websocket closed while writing: 1746255344
+2023-12-19 01:29:42,800 [websockets.py:on_close()] - Websocket Closed: ID: 1746255344 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.99
+2023-12-19 01:36:10,709 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.database.get_item, Code: -32601, Message: Namespace 'webcams' not found
+2023-12-19 01:36:35,652 [app.py:log_request()] - 101 GET /websocket (192.168.2.251) [_TRUSTED_USER_] 5.45ms
+2023-12-19 01:36:35,653 [websockets.py:open()] - Websocket Opened: ID: 1727396880, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 01:36:35,664 [websockets.py:_handle_identify()] - Websocket 1727396880 Client Identified - Name: mainsail, Version: 2.8.0, Type: web
+2023-12-19 01:42:52,524 [websockets.py:on_close()] - Websocket Closed: ID: 1727750808 Close Code: None, Close Reason: None, Pong Time Elapsed: 8.30
+2023-12-19 01:42:52,529 [websockets.py:on_close()] - Websocket Closed: ID: 1727751048 Close Code: None, Close Reason: None, Pong Time Elapsed: 8.25
+2023-12-19 01:42:52,533 [websockets.py:on_close()] - Websocket Closed: ID: 1746254240 Close Code: None, Close Reason: None, Pong Time Elapsed: 7.14
+2023-12-19 01:42:52,534 [websockets.py:on_close()] - Websocket Closed: ID: 1746254528 Close Code: None, Close Reason: None, Pong Time Elapsed: 7.13
+2023-12-19 02:17:25,735 [websockets.py:write_to_socket()] - Websocket closed while writing: 1727396880
+2023-12-19 02:17:30,657 [websockets.py:on_close()] - Websocket Closed: ID: 1727396880 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.97
+2023-12-19 02:29:25,875 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.2.131
+2023-12-19 02:33:23,505 [app.py:log_request()] - 101 GET /websocket (192.168.2.251) [_TRUSTED_USER_] 5.36ms
+2023-12-19 02:33:23,506 [websockets.py:open()] - Websocket Opened: ID: 1746253208, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 02:33:23,578 [websockets.py:_handle_identify()] - Websocket 1746253208 Client Identified - Name: mainsail, Version: 2.8.0, Type: web
+2023-12-19 03:01:12,930 [websockets.py:on_close()] - Websocket Closed: ID: 1746253208 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 9.41
+2023-12-19 03:07:01,903 [app.py:prepare()] - Upload Request Received from 192.168.2.251
+Content-Type: multipart/form-data; boundary=------------------------CeXYGDpnXH7T7eVbssuaUm
+2023-12-19 03:07:14,283 [app.py:post()] - Processing Uploaded File: FertilityIdol.gcode
+2023-12-19 03:07:14,704 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is enabled
+
+2023-12-19 03:07:14,723 [shell_command.py:pipe_data_received()] - INFO:metadata:File 'FertilityIdol.gcode' currently supports cancellation, processing aborted
+
+2023-12-19 03:07:14,887 [shell_command.py:_check_proc_success()] - Command (/home/pi/moonraker-env/bin/python /home/pi/moonraker/moonraker/components/file_manager/metadata.py -p /home/pi/printer_data/gcodes -f "FertilityIdol.gcode" --check-objects) successfully finished
+2023-12-19 03:07:14,894 [app.py:log_request()] - 201 POST /server/files/upload (192.168.2.251) [_TRUSTED_USER_] 12992.75ms
+2023-12-19 03:07:21,573 [app.py:log_request()] - 101 GET /websocket (192.168.2.251) [_TRUSTED_USER_] 7.22ms
+2023-12-19 03:07:21,574 [websockets.py:open()] - Websocket Opened: ID: 1727483040, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 03:07:21,586 [app.py:log_request()] - 101 GET /websocket (192.168.2.251) [_TRUSTED_USER_] 6.26ms
+2023-12-19 03:07:21,588 [websockets.py:open()] - Websocket Opened: ID: 1717351448, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 03:07:21,619 [websockets.py:_handle_identify()] - Websocket 1727483040 Client Identified - Name: OctoEverywhere-BrowserAgent, Version: 1.0.0, Type: web
+2023-12-19 03:07:21,622 [websockets.py:_handle_identify()] - Websocket 1717351448 Client Identified - Name: mainsail, Version: 2.8.0, Type: web
+2023-12-19 03:07:32,183 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2023-12-19 03:07:32,192 [websockets.py:on_close()] - Websocket Closed: ID: 1706828968 Close Code: 1000, Close Reason: None, Pong Time Elapsed: 5.71
+2023-12-19 03:07:34,203 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2023-12-19 03:07:34,211 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+2023-12-19 03:07:34,214 [app.py:log_request()] - 101 GET /websocket (127.0.0.1) [_TRUSTED_USER_] 5.08ms
+2023-12-19 03:07:34,215 [websockets.py:open()] - Websocket Opened: ID: 1746253520, Proxied: False, User Agent: , Host Name: 0.0.0.0
+2023-12-19 03:07:34,223 [websockets.py:_handle_identify()] - Websocket 1746253520 Client Identified - Name: OctoEverywhere, Version: 2.10.1, Type: agent
+2023-12-19 03:07:34,311 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.database.get_item, Code: -32601, Message: Namespace 'webcams' not found
+2023-12-19 03:07:38,659 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2023-12-19 03:07:38,663 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2023-12-19 03:07:38,911 [job_state.py:_handle_started()] - Job state initialized: standby
+2023-12-19 03:07:39,179 [klippy_connection.py:_check_ready()] - Klippy ready
+2023-12-19 03:07:39,674 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2023-12-19 03:08:41,788 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2023-12-19 03:08:41,791 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://127.0.0.1
+2023-12-19 03:08:51,802 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 03:08:51,805 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.2.180
+2023-12-19 03:09:01,817 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 03:09:11,829 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 03:10:41,944 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2023-12-19 03:10:41,946 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://127.0.0.1
+2023-12-19 03:11:01,981 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2023-12-19 03:11:11,981 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 03:11:11,983 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.2.180
+2023-12-19 03:11:21,989 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 03:16:52,927 [job_state.py:_status_update()] - Job Started: FertilityIdol.gcode
+2023-12-19 03:16:57,771 [websockets.py:on_close()] - Websocket Closed: ID: 1717351448 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 6.13
+2023-12-19 03:16:57,775 [websockets.py:on_close()] - Websocket Closed: ID: 1727483040 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 6.18
+2023-12-19 03:25:03,082 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2023-12-19 03:25:03,084 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://127.0.0.1
+2023-12-19 03:25:13,096 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2023-12-19 03:25:23,108 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 03:25:23,111 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.2.180
+2023-12-19 04:08:32,023 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.database.get_item, Code: -32601, Message: Namespace 'webcams' not found
+2023-12-19 04:09:25,900 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.2.251
+2023-12-19 04:09:25,901 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
+2023-12-19 04:53:00,137 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2023-12-19 04:53:00,139 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://127.0.0.1
+2023-12-19 04:53:10,148 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 04:53:10,150 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.2.180
+2023-12-19 04:53:20,167 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 04:57:00,425 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2023-12-19 04:57:00,427 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://127.0.0.1
+2023-12-19 04:57:10,447 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 04:57:10,450 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.2.180
+2023-12-19 04:57:20,452 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 04:58:10,518 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2023-12-19 04:58:10,520 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://127.0.0.1
+2023-12-19 04:58:20,531 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 04:58:20,534 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.2.180
+2023-12-19 04:58:30,544 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 04:59:10,600 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2023-12-19 04:59:10,602 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://127.0.0.1
+2023-12-19 04:59:20,612 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2023-12-19 04:59:30,628 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 04:59:30,631 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.2.180
+2023-12-19 04:59:50,651 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2023-12-19 04:59:50,654 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://127.0.0.1
+2023-12-19 05:00:00,667 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 05:00:00,670 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.2.180
+2023-12-19 05:00:50,729 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2023-12-19 05:00:50,732 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://127.0.0.1
+2023-12-19 05:01:00,741 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2023-12-19 05:01:10,759 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 05:01:10,763 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.2.180
+2023-12-19 05:01:50,817 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2023-12-19 05:01:50,820 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://127.0.0.1
+2023-12-19 05:02:00,826 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 05:02:00,829 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.2.180
+2023-12-19 05:02:50,893 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2023-12-19 05:02:50,897 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://127.0.0.1
+2023-12-19 05:03:00,905 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 05:03:00,907 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.2.180
+2023-12-19 05:04:51,061 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2023-12-19 05:04:51,064 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://127.0.0.1
+2023-12-19 05:05:01,067 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 05:05:01,069 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.2.180
+2023-12-19 05:05:11,091 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 05:08:51,364 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 05:09:01,376 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2023-12-19 05:09:01,378 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://127.0.0.1
+2023-12-19 05:09:11,391 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 05:09:11,394 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.2.180
+2023-12-19 05:09:47,594 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.database.get_item, Code: -32601, Message: Namespace 'webcams' not found
+2023-12-19 05:10:01,457 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2023-12-19 05:10:01,459 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://127.0.0.1
+2023-12-19 05:10:11,470 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 05:10:11,473 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.2.180
+2023-12-19 05:10:21,481 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 05:11:01,537 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2023-12-19 05:11:01,538 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://127.0.0.1
+2023-12-19 05:11:11,555 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 05:11:11,557 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.2.180
+2023-12-19 05:11:21,574 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 05:13:01,697 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2023-12-19 05:13:01,699 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://127.0.0.1
+2023-12-19 05:13:11,723 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2023-12-19 05:13:21,727 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 05:13:21,729 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.2.180
+2023-12-19 05:16:21,982 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2023-12-19 05:16:21,984 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://127.0.0.1
+2023-12-19 05:16:31,994 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2023-12-19 05:16:42,016 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 05:16:42,018 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.2.180
+2023-12-19 06:10:17,013 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.database.get_item, Code: -32601, Message: Namespace 'webcams' not found
+2023-12-19 07:10:45,679 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.database.get_item, Code: -32601, Message: Namespace 'webcams' not found
+2023-12-19 08:11:14,051 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.database.get_item, Code: -32601, Message: Namespace 'webcams' not found
+2023-12-19 09:11:42,841 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.database.get_item, Code: -32601, Message: Namespace 'webcams' not found
+2023-12-19 14:23:23,260 [app.py:log_request()] - 404 GET /server/files/gcodes/.thumbs/CloneTiles-400x300.png?timestamp=1702942403.6943603 (192.168.2.251) [No User] 11.88ms
+2023-12-19 14:23:23,266 [app.py:log_request()] - 404 GET /server/files/gcodes/.thumbs/CloneTiles-32x32.png?timestamp=1702942403694 (192.168.2.251) [No User] 13.02ms
+2023-12-19 14:23:23,638 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.2.251
+2023-12-19 14:23:23,642 [app.py:log_request()] - 101 GET /websocket (192.168.2.251) [_TRUSTED_USER_] 8.06ms
+2023-12-19 14:23:23,643 [websockets.py:open()] - Websocket Opened: ID: 1717034840, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 14:23:23,657 [app.py:log_request()] - 101 GET /websocket (192.168.2.251) [_TRUSTED_USER_] 5.19ms
+2023-12-19 14:23:23,658 [websockets.py:open()] - Websocket Opened: ID: 1717031072, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 14:23:23,665 [websockets.py:_handle_identify()] - Websocket 1717034840 Client Identified - Name: OctoEverywhere-BrowserAgent, Version: 1.0.0, Type: web
+2023-12-19 14:23:23,710 [websockets.py:_handle_identify()] - Websocket 1717031072 Client Identified - Name: mainsail, Version: 2.8.0, Type: web
+2023-12-19 14:23:27,435 [websockets.py:on_close()] - Websocket Closed: ID: 1717031072 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 3.78
+2023-12-19 14:23:27,440 [websockets.py:on_close()] - Websocket Closed: ID: 1717034840 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 3.80
+2023-12-19 14:35:18,229 [app.py:log_request()] - 101 GET /websocket (192.168.2.251) [_TRUSTED_USER_] 10.74ms
+2023-12-19 14:35:18,231 [websockets.py:open()] - Websocket Opened: ID: 1717031888, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 14:35:18,235 [app.py:log_request()] - 101 GET /websocket (192.168.2.251) [_TRUSTED_USER_] 10.66ms
+2023-12-19 14:35:18,236 [websockets.py:open()] - Websocket Opened: ID: 1717031456, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 14:35:18,250 [websockets.py:_handle_identify()] - Websocket 1717031888 Client Identified - Name: mainsail, Version: 2.8.0, Type: web
+2023-12-19 14:35:18,256 [websockets.py:_handle_identify()] - Websocket 1717031456 Client Identified - Name: OctoEverywhere-BrowserAgent, Version: 1.0.0, Type: web
+2023-12-19 14:35:21,698 [app.py:prepare()] - Upload Request Received from 192.168.2.251
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundarywqRIK5SMcAtys5Au
+2023-12-19 14:35:22,412 [app.py:post()] - Processing Uploaded File: CloneTileCard.gcode
+2023-12-19 14:35:22,835 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is enabled
+
+2023-12-19 14:35:22,851 [shell_command.py:pipe_data_received()] - INFO:metadata:File 'CloneTileCard.gcode' currently supports cancellation, processing aborted
+
+2023-12-19 14:35:23,004 [shell_command.py:_check_proc_success()] - Command (/home/pi/moonraker-env/bin/python /home/pi/moonraker/moonraker/components/file_manager/metadata.py -p /home/pi/printer_data/gcodes -f "CloneTileCard.gcode" --check-objects) successfully finished
+2023-12-19 14:35:23,011 [app.py:log_request()] - 201 POST /server/files/upload (192.168.2.251) [_TRUSTED_USER_] 1315.39ms
+2023-12-19 14:35:31,719 [websockets.py:on_close()] - Websocket Closed: ID: 1717031456 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 3.42
+2023-12-19 14:35:31,724 [websockets.py:on_close()] - Websocket Closed: ID: 1717031888 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 3.43
+2023-12-19 14:36:20,670 [app.py:log_request()] - 101 GET /websocket (192.168.2.251) [_TRUSTED_USER_] 9.88ms
+2023-12-19 14:36:20,671 [websockets.py:open()] - Websocket Opened: ID: 1717054288, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 14:36:20,674 [app.py:log_request()] - 101 GET /websocket (192.168.2.251) [_TRUSTED_USER_] 9.67ms
+2023-12-19 14:36:20,675 [websockets.py:open()] - Websocket Opened: ID: 1717053064, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 14:36:20,683 [websockets.py:_handle_identify()] - Websocket 1717054288 Client Identified - Name: mainsail, Version: 2.8.0, Type: web
+2023-12-19 14:36:20,688 [websockets.py:_handle_identify()] - Websocket 1717053064 Client Identified - Name: OctoEverywhere-BrowserAgent, Version: 1.0.0, Type: web
+2023-12-19 14:36:40,576 [job_state.py:_status_update()] - Job Started: CloneTileCard.gcode
+2023-12-19 14:36:41,621 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.database.get_item, Code: -32601, Message: Namespace 'webcams' not found
+2023-12-19 14:36:43,406 [websockets.py:on_close()] - Websocket Closed: ID: 1717053064 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 2.71
+2023-12-19 14:36:43,410 [websockets.py:on_close()] - Websocket Closed: ID: 1717054288 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 2.71
+2023-12-19 14:42:16,864 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2023-12-19 14:42:16,866 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://127.0.0.1
+2023-12-19 14:42:26,870 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 14:42:26,872 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.2.180
+2023-12-19 14:42:36,888 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 14:42:56,925 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2023-12-19 14:42:56,927 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://127.0.0.1
+2023-12-19 14:43:16,948 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 14:43:16,951 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.2.180
+2023-12-19 14:43:26,959 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 14:45:57,174 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2023-12-19 14:45:57,176 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://127.0.0.1
+2023-12-19 14:46:17,201 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2023-12-19 14:46:27,215 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 14:46:27,219 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.2.180
+2023-12-19 14:46:47,247 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2023-12-19 14:46:47,252 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://127.0.0.1
+2023-12-19 14:46:57,250 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 14:46:57,252 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.2.180
+2023-12-19 15:37:09,605 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.database.get_item, Code: -32601, Message: Namespace 'webcams' not found
+2023-12-19 15:39:26,077 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.2.251
+2023-12-19 15:40:11,909 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.2.251
+2023-12-19 15:40:11,913 [app.py:log_request()] - 101 GET /websocket (192.168.2.251) [_TRUSTED_USER_] 12.81ms
+2023-12-19 15:40:11,914 [websockets.py:open()] - Websocket Opened: ID: 1717082144, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 15:40:11,923 [app.py:log_request()] - 101 GET /websocket (192.168.2.251) [_TRUSTED_USER_] 16.99ms
+2023-12-19 15:40:11,924 [websockets.py:open()] - Websocket Opened: ID: 1717084016, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 15:40:11,958 [websockets.py:_handle_identify()] - Websocket 1717082144 Client Identified - Name: mainsail, Version: 2.8.0, Type: web
+2023-12-19 15:40:11,964 [websockets.py:_handle_identify()] - Websocket 1717084016 Client Identified - Name: OctoEverywhere-BrowserAgent, Version: 1.0.0, Type: web
+2023-12-19 15:42:06,835 [websockets.py:on_close()] - Websocket Closed: ID: 1717082144 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 4.90
+2023-12-19 15:42:06,841 [websockets.py:on_close()] - Websocket Closed: ID: 1717084016 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 4.91
+2023-12-19 16:05:57,935 [app.py:log_request()] - 101 GET /websocket (192.168.2.251) [_TRUSTED_USER_] 5.57ms
+2023-12-19 16:05:57,936 [websockets.py:open()] - Websocket Opened: ID: 1717080200, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 16:05:57,948 [app.py:log_request()] - 101 GET /websocket (192.168.2.251) [_TRUSTED_USER_] 5.72ms
+2023-12-19 16:05:57,949 [websockets.py:open()] - Websocket Opened: ID: 1717083752, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 16:05:57,955 [websockets.py:_handle_identify()] - Websocket 1717080200 Client Identified - Name: OctoEverywhere-BrowserAgent, Version: 1.0.0, Type: web
+2023-12-19 16:05:58,004 [websockets.py:_handle_identify()] - Websocket 1717083752 Client Identified - Name: mainsail, Version: 2.8.0, Type: web
+2023-12-19 16:06:02,087 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.print.resume, Code: 400, Message: Must home axis first: 159.249 167.376 3.354 [28687.002]
+2023-12-19 16:06:07,212 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.print.resume, Code: 400, Message: Must home axis first: 159.249 167.376 3.354 [28688.002]
+2023-12-19 16:06:51,787 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.print.resume, Code: 400, Message: Must home axis first: 159.249 167.376 3.354 [28689.002]
+2023-12-19 16:08:07,990 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.print.resume, Code: 400, Message: Must home axis first: 55.948 86.543 2.363 [28690.002]
+2023-12-19 16:15:43,945 [app.py:prepare()] - Upload Request Received from 192.168.2.251
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryvyT8AJhxCcbXBDtS
+2023-12-19 16:15:43,974 [app.py:post()] - Processing Uploaded File: printer.cfg
+2023-12-19 16:15:43,990 [app.py:log_request()] - 201 POST /server/files/upload (192.168.2.251) [_TRUSTED_USER_] 48.55ms
+2023-12-19 16:15:47,804 [websockets.py:on_close()] - Websocket Closed: ID: 1717083752 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 9.80
+2023-12-19 16:15:47,809 [websockets.py:on_close()] - Websocket Closed: ID: 1717080200 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 9.86
+2023-12-19 16:30:31,025 [app.py:log_request()] - 101 GET /websocket (192.168.2.251) [_TRUSTED_USER_] 5.74ms
+2023-12-19 16:30:31,027 [websockets.py:open()] - Websocket Opened: ID: 1717082456, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 16:30:31,038 [app.py:log_request()] - 101 GET /websocket (192.168.2.251) [_TRUSTED_USER_] 5.64ms
+2023-12-19 16:30:31,039 [websockets.py:open()] - Websocket Opened: ID: 1717054960, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 16:30:31,070 [websockets.py:_handle_identify()] - Websocket 1717082456 Client Identified - Name: OctoEverywhere-BrowserAgent, Version: 1.0.0, Type: web
+2023-12-19 16:30:31,074 [websockets.py:_handle_identify()] - Websocket 1717054960 Client Identified - Name: mainsail, Version: 2.8.0, Type: web
+2023-12-19 16:30:35,831 [websockets.py:on_close()] - Websocket Closed: ID: 1717082456 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 4.81
+2023-12-19 16:30:35,835 [websockets.py:on_close()] - Websocket Closed: ID: 1717054960 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 4.80
+2023-12-19 17:02:36,574 [app.py:log_request()] - 101 GET /websocket (192.168.2.251) [_TRUSTED_USER_] 9.21ms
+2023-12-19 17:02:36,575 [websockets.py:open()] - Websocket Opened: ID: 1717082816, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 17:02:36,579 [app.py:log_request()] - 101 GET /websocket (192.168.2.251) [_TRUSTED_USER_] 9.18ms
+2023-12-19 17:02:36,579 [websockets.py:open()] - Websocket Opened: ID: 1717081880, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 17:02:36,630 [websockets.py:_handle_identify()] - Websocket 1717082816 Client Identified - Name: OctoEverywhere-BrowserAgent, Version: 1.0.0, Type: web
+2023-12-19 17:02:36,631 [websockets.py:_handle_identify()] - Websocket 1717081880 Client Identified - Name: mainsail, Version: 2.8.0, Type: web
+2023-12-19 17:02:51,697 [app.py:prepare()] - Upload Request Received from 192.168.2.251
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary80dUeEELjwADth7P
+2023-12-19 17:02:53,845 [app.py:post()] - Processing Uploaded File: ChristmasTreeCC.gcode
+2023-12-19 17:02:54,269 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is enabled
+
+2023-12-19 17:02:54,287 [shell_command.py:pipe_data_received()] - INFO:metadata:File 'ChristmasTreeCC.gcode' currently supports cancellation, processing aborted
+
+2023-12-19 17:02:54,440 [shell_command.py:_check_proc_success()] - Command (/home/pi/moonraker-env/bin/python /home/pi/moonraker/moonraker/components/file_manager/metadata.py -p /home/pi/printer_data/gcodes -f "ChristmasTreeCC.gcode" --check-objects) successfully finished
+2023-12-19 17:02:54,447 [app.py:log_request()] - 201 POST /server/files/upload (192.168.2.251) [_TRUSTED_USER_] 2753.50ms
+2023-12-19 17:07:10,365 [app.py:prepare()] - Upload Request Received from 192.168.2.251
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary03MCC2m1Am2YRFYw
+2023-12-19 17:07:10,399 [app.py:post()] - Processing Uploaded File: printer.cfg
+2023-12-19 17:07:10,417 [app.py:log_request()] - 201 POST /server/files/upload (192.168.2.251) [_TRUSTED_USER_] 54.88ms
+2023-12-19 17:07:11,472 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2023-12-19 17:07:11,487 [websockets.py:on_close()] - Websocket Closed: ID: 1746253520 Close Code: 1000, Close Reason: None, Pong Time Elapsed: 7.27
+2023-12-19 17:07:12,739 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2023-12-19 17:07:13,510 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+2023-12-19 17:07:13,516 [app.py:log_request()] - 101 GET /websocket (127.0.0.1) [_TRUSTED_USER_] 7.44ms
+2023-12-19 17:07:13,518 [websockets.py:open()] - Websocket Opened: ID: 1746254456, Proxied: False, User Agent: , Host Name: 0.0.0.0
+2023-12-19 17:07:13,522 [websockets.py:_handle_identify()] - Websocket 1746254456 Client Identified - Name: OctoEverywhere, Version: 2.10.1, Type: agent
+2023-12-19 17:07:13,540 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.database.get_item, Code: -32601, Message: Namespace 'webcams' not found
+2023-12-19 17:07:17,059 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2023-12-19 17:07:17,062 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2023-12-19 17:07:17,311 [job_state.py:_handle_started()] - Job state initialized: standby
+2023-12-19 17:07:17,598 [klippy_connection.py:_check_ready()] - Klippy ready
+2023-12-19 17:07:18,582 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2023-12-19 17:07:20,826 [job_state.py:_status_update()] - Job Started: ChristmasTreeCC.gcode
+2023-12-19 17:07:26,330 [websockets.py:on_close()] - Websocket Closed: ID: 1717082816 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 9.73
+2023-12-19 17:07:26,336 [websockets.py:on_close()] - Websocket Closed: ID: 1717081880 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 9.69
+2023-12-19 17:36:51,342 [app.py:log_request()] - 404 GET /server/files/gcodes/.thumbs/CloneTileCard-32x32.png?timestamp=1702996522402 (192.168.2.251) [No User] 7.93ms
+2023-12-19 17:36:51,356 [app.py:log_request()] - 404 GET /server/files/gcodes/.thumbs/CloneTileCard-400x300.png?timestamp=1702996522.402613 (192.168.2.251) [No User] 7.07ms
+2023-12-19 17:36:51,646 [app.py:log_request()] - 101 GET /websocket (192.168.2.251) [_TRUSTED_USER_] 5.05ms
+2023-12-19 17:36:51,647 [websockets.py:open()] - Websocket Opened: ID: 1717031120, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 17:36:51,657 [app.py:log_request()] - 101 GET /websocket (192.168.2.251) [_TRUSTED_USER_] 4.35ms
+2023-12-19 17:36:51,658 [websockets.py:open()] - Websocket Opened: ID: 1746253952, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 17:36:51,687 [websockets.py:_handle_identify()] - Websocket 1717031120 Client Identified - Name: OctoEverywhere-BrowserAgent, Version: 1.0.0, Type: web
+2023-12-19 17:36:51,693 [websockets.py:_handle_identify()] - Websocket 1746253952 Client Identified - Name: mainsail, Version: 2.8.0, Type: web
+2023-12-19 17:37:28,492 [app.py:prepare()] - Upload Request Received from 192.168.2.251
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryaYbqlgtmjSCTqAdA
+2023-12-19 17:37:28,523 [app.py:post()] - Processing Uploaded File: printer.cfg
+2023-12-19 17:37:28,540 [app.py:log_request()] - 201 POST /server/files/upload (192.168.2.251) [_TRUSTED_USER_] 50.76ms
+2023-12-19 17:37:29,595 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2023-12-19 17:37:29,607 [websockets.py:on_close()] - Websocket Closed: ID: 1746254456 Close Code: 1000, Close Reason: None, Pong Time Elapsed: 6.09
+2023-12-19 17:37:30,863 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2023-12-19 17:37:31,628 [app.py:log_request()] - 101 GET /websocket (127.0.0.1) [_TRUSTED_USER_] 3.77ms
+2023-12-19 17:37:31,629 [websockets.py:open()] - Websocket Opened: ID: 1727481600, Proxied: False, User Agent: , Host Name: 0.0.0.0
+2023-12-19 17:37:31,638 [websockets.py:_handle_identify()] - Websocket 1727481600 Client Identified - Name: OctoEverywhere, Version: 2.10.1, Type: agent
+2023-12-19 17:37:35,170 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2023-12-19 17:37:35,175 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2023-12-19 17:37:35,421 [job_state.py:_handle_started()] - Job state initialized: standby
+2023-12-19 17:37:35,731 [klippy_connection.py:_check_ready()] - Klippy ready
+2023-12-19 17:37:36,694 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2023-12-19 17:37:58,269 [websockets.py:on_close()] - Websocket Closed: ID: 1746253952 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 6.55
+2023-12-19 17:37:58,273 [websockets.py:on_close()] - Websocket Closed: ID: 1717031120 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 6.61
+2023-12-19 17:48:07,904 [app.py:log_request()] - 101 GET /websocket (192.168.2.251) [_TRUSTED_USER_] 5.56ms
+2023-12-19 17:48:07,905 [websockets.py:open()] - Websocket Opened: ID: 1717030952, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 17:48:07,917 [app.py:log_request()] - 101 GET /websocket (192.168.2.251) [_TRUSTED_USER_] 5.95ms
+2023-12-19 17:48:07,918 [websockets.py:open()] - Websocket Opened: ID: 1717032176, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 17:48:07,940 [websockets.py:_handle_identify()] - Websocket 1717030952 Client Identified - Name: OctoEverywhere-BrowserAgent, Version: 1.0.0, Type: web
+2023-12-19 17:48:07,944 [websockets.py:_handle_identify()] - Websocket 1717032176 Client Identified - Name: mainsail, Version: 2.8.0, Type: web
+2023-12-19 17:48:12,097 [job_state.py:_status_update()] - Job Started: ChristmasTreeCC.gcode
+2023-12-19 17:48:13,779 [websockets.py:on_close()] - Websocket Closed: ID: 1717030952 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 5.88
+2023-12-19 17:48:13,784 [websockets.py:on_close()] - Websocket Closed: ID: 1717032176 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 5.87
+2023-12-19 18:08:54,197 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.database.get_item, Code: -32601, Message: Namespace 'webcams' not found
+2023-12-19 18:39:26,124 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
+2023-12-19 18:49:26,126 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.2.251
+2023-12-19 19:09:22,216 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.database.get_item, Code: -32601, Message: Namespace 'webcams' not found
+2023-12-19 19:27:15,522 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.2.251
+2023-12-19 19:27:15,525 [app.py:log_request()] - 101 GET /websocket (192.168.2.251) [_TRUSTED_USER_] 12.28ms
+2023-12-19 19:27:15,526 [websockets.py:open()] - Websocket Opened: ID: 1717032920, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 19:27:15,532 [app.py:log_request()] - 101 GET /websocket (192.168.2.251) [_TRUSTED_USER_] 13.84ms
+2023-12-19 19:27:15,534 [websockets.py:open()] - Websocket Opened: ID: 1717034528, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 19:27:15,561 [websockets.py:_handle_identify()] - Websocket 1717032920 Client Identified - Name: mainsail, Version: 2.8.0, Type: web
+2023-12-19 19:27:15,566 [websockets.py:_handle_identify()] - Websocket 1717034528 Client Identified - Name: OctoEverywhere-BrowserAgent, Version: 1.0.0, Type: web
+2023-12-19 19:33:06,841 [app.py:prepare()] - Upload Request Received from 192.168.2.251
+Content-Type: multipart/form-data; boundary=------------------------s63yMvalMi6WJpcmDYyHh9
+2023-12-19 19:33:09,777 [app.py:post()] - Processing Uploaded File: CookieCutter+Box.gcode
+2023-12-19 19:33:10,215 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is enabled
+
+2023-12-19 19:33:10,234 [shell_command.py:pipe_data_received()] - INFO:metadata:File 'CookieCutter+Box.gcode' currently supports cancellation, processing aborted
+
+2023-12-19 19:33:10,390 [shell_command.py:_check_proc_success()] - Command (/home/pi/moonraker-env/bin/python /home/pi/moonraker/moonraker/components/file_manager/metadata.py -p /home/pi/printer_data/gcodes -f "CookieCutter+Box.gcode" --check-objects) successfully finished
+2023-12-19 19:33:10,397 [app.py:log_request()] - 201 POST /server/files/upload (192.168.2.251) [_TRUSTED_USER_] 3557.85ms
+2023-12-19 19:33:19,617 [job_state.py:_status_update()] - Job Started: CookieCutter+Box.gcode
+2023-12-19 19:33:21,438 [websockets.py:on_close()] - Websocket Closed: ID: 1717034528 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 5.89
+2023-12-19 19:33:21,442 [websockets.py:on_close()] - Websocket Closed: ID: 1717032920 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 5.88
+2023-12-19 20:09:38,449 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.database.get_item, Code: -32601, Message: Namespace 'webcams' not found
+2023-12-19 20:34:26,155 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.2.251
+2023-12-19 21:10:06,735 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.database.get_item, Code: -32601, Message: Namespace 'webcams' not found
+2023-12-19 22:56:26,702 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.2.251
+2023-12-19 22:56:26,706 [app.py:log_request()] - 101 GET /websocket (192.168.2.251) [_TRUSTED_USER_] 12.82ms
+2023-12-19 22:56:26,707 [websockets.py:open()] - Websocket Opened: ID: 1717034168, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 22:56:26,711 [app.py:log_request()] - 101 GET /websocket (192.168.2.251) [_TRUSTED_USER_] 12.05ms
+2023-12-19 22:56:26,712 [websockets.py:open()] - Websocket Opened: ID: 1747725688, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 22:56:26,756 [websockets.py:_handle_identify()] - Websocket 1717034168 Client Identified - Name: mainsail, Version: 2.8.0, Type: web
+2023-12-19 22:56:26,760 [websockets.py:_handle_identify()] - Websocket 1747725688 Client Identified - Name: OctoEverywhere-BrowserAgent, Version: 1.0.0, Type: web
+2023-12-19 22:56:30,824 [app.py:prepare()] - Upload Request Received from 192.168.2.251
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary8rj6qatqAuC8D5aB
+2023-12-19 22:56:34,014 [app.py:post()] - Processing Uploaded File: OctaTwist.gcode
+2023-12-19 22:56:34,474 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is enabled
+
+2023-12-19 22:56:34,492 [shell_command.py:pipe_data_received()] - INFO:metadata:File 'OctaTwist.gcode' currently supports cancellation, processing aborted
+
+2023-12-19 22:56:34,642 [shell_command.py:_check_proc_success()] - Command (/home/pi/moonraker-env/bin/python /home/pi/moonraker/moonraker/components/file_manager/metadata.py -p /home/pi/printer_data/gcodes -f "OctaTwist.gcode" --check-objects) successfully finished
+2023-12-19 22:56:34,649 [app.py:log_request()] - 201 POST /server/files/upload (192.168.2.251) [_TRUSTED_USER_] 3826.99ms
+2023-12-19 22:56:40,663 [websockets.py:on_close()] - Websocket Closed: ID: 1717034168 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 3.93
+2023-12-19 22:56:40,667 [websockets.py:on_close()] - Websocket Closed: ID: 1747725688 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 3.94
+2023-12-19 23:04:02,701 [app.py:log_request()] - 101 GET /websocket (192.168.2.251) [_TRUSTED_USER_] 7.54ms
+2023-12-19 23:04:02,702 [websockets.py:open()] - Websocket Opened: ID: 1717552656, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 23:04:02,716 [app.py:log_request()] - 101 GET /websocket (192.168.2.251) [_TRUSTED_USER_] 6.96ms
+2023-12-19 23:04:02,717 [websockets.py:open()] - Websocket Opened: ID: 1746150472, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15, Host Name: 192.168.2.180
+2023-12-19 23:04:02,732 [websockets.py:_handle_identify()] - Websocket 1717552656 Client Identified - Name: mainsail, Version: 2.8.0, Type: web
+2023-12-19 23:04:02,738 [websockets.py:_handle_identify()] - Websocket 1746150472 Client Identified - Name: OctoEverywhere-BrowserAgent, Version: 1.0.0, Type: web
+2023-12-19 23:04:10,009 [job_state.py:_status_update()] - Job Started: OctaTwist.gcode
+2023-12-19 23:04:10,798 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.database.get_item, Code: -32601, Message: Namespace 'webcams' not found
+2023-12-19 23:04:37,128 [websockets.py:on_close()] - Websocket Closed: ID: 1746150472 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 4.40
+2023-12-19 23:04:37,132 [websockets.py:on_close()] - Websocket Closed: ID: 1717552656 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 4.41
+2023-12-19 23:09:48,909 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2023-12-19 23:09:48,912 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://127.0.0.1
+2023-12-19 23:10:08,934 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2023-12-19 23:10:18,941 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.2.180
+2023-12-19 23:10:18,944 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.2.180
