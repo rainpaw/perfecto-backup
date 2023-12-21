@@ -11380,3 +11380,25 @@ fatal: could not read Password for 'https://github_pat_11BBGVPYY02hdV3KMo4JDn_0q
 Command {update_git_script} finished
 
 Running Command {update_git_script}...:
+Reinitialized existing Git repository in /home/pi/klipper-backup/.git/
+
+WARNING: git-filter-branch has a glut of gotchas generating mangled history
+	 rewrites.  Hit Ctrl-C before proceeding to abort, then use an
+	 alternative filtering tool such as 'git filter-repo'
+	 (https://github.com/newren/git-filter-repo/) instead.  See the
+	 filter-branch manual page for more details; to squelch this warning,
+	 set FILTER_BRANCH_SQUELCH_WARNING=1.
+
+Proceeding with filter-branch...
+
+
+Cannot rewrite branches: You have unstaged changes.
+
+[main be5f08d] New backup from 21-12-23
+ 1 file changed, 71 insertions(+)
+
+fatal: could not read Password for 'https://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@github.com': No such device or address
+
+Command {update_git_script} finished
+
+Running Command {update_git_script}...:
