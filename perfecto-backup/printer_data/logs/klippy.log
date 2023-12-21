@@ -11309,3 +11309,74 @@ To https://github.com/rainpaw/perfecto-backup.git
 Command {update_git_script} finished
 
 Running Command {update_git_script}...:
+Reinitialized existing Git repository in /home/pi/klipper-backup/.git/
+
+WARNING: git-filter-branch has a glut of gotchas generating mangled history
+	 rewrites.  Hit Ctrl-C before proceeding to abort, then use an
+	 alternative filtering tool such as 'git filter-repo'
+	 (https://github.com/newren/git-filter-repo/) instead.  See the
+	 filter-branch manual page for more details; to squelch this warning,
+	 set FILTER_BRANCH_SQUELCH_WARNING=1.
+
+Proceeding with filter-branch...
+
+
+Cannot rewrite branches: You have unstaged changes.
+
+[main 534c3cd] New backup from 21-12-23
+ 50 files changed, 23 insertions(+), 454544 deletions(-)
+ delete mode 100644 klipper/crowsnest.conf
+ delete mode 120000 klipper/mainsail.cfg
+ delete mode 100644 klipper/moonraker.conf
+ delete mode 100644 klipper/printer.cfg
+ delete mode 100644 klipper/printer_data/.moonraker.uuid
+ delete mode 100644 klipper/printer_data/backup/20231208T230049Z/config/moonraker.conf
+ delete mode 120000 klipper/printer_data/comms/klippy.serial
+ delete mode 100644 klipper/printer_data/config/.moonraker.conf.bkp
+ delete mode 100644 klipper/printer_data/config/Adaptive_Meshing.cfg
+ delete mode 120000 klipper/printer_data/config/KAMP
+ delete mode 100644 klipper/printer_data/config/KAMP_Settings.cfg
+ delete mode 100644 klipper/printer_data/config/Line_Purge.cfg
+ delete mode 100644 klipper/printer_data/config/crowsnest.conf
+ delete mode 100755 klipper/printer_data/config/klipper.bin
+ delete mode 120000 klipper/printer_data/config/mainsail.cfg
+ delete mode 100644 klipper/printer_data/config/moonraker.conf
+ delete mode 100644 klipper/printer_data/config/moonraker.conf.backup
+ delete mode 100644 klipper/printer_data/config/octoeverywhere-system.cfg
+ delete mode 100644 klipper/printer_data/config/octoeverywhere.conf
+ delete mode 100644 klipper/printer_data/config/printer.cfg
+ delete mode 100644 klipper/printer_data/config/start_print.cfg
+ delete mode 100644 klipper/printer_data/database/data.mdb
+ delete mode 100644 klipper/printer_data/database/lock.mdb
+ delete mode 100644 klipper/printer_data/gcodes/.thumbs/JumpyPresent-32x32.png
+ delete mode 100644 klipper/printer_data/gcodes/.thumbs/JumpyPresent-400x300.png
+ delete mode 100644 klipper/printer_data/gcodes/JumpyPresent.gcode
+ delete mode 100644 klipper/printer_data/logs/crowsnest.log
+ delete mode 100644 klipper/printer_data/logs/crowsnest.log.2023-12-19
+ delete mode 100644 klipper/printer_data/logs/crowsnest.log.2023-12-20
+ delete mode 100644 klipper/printer_data/logs/crowsnest.log.2023-12-21
+ delete mode 100644 klipper/printer_data/logs/klippy.log
+ delete mode 100644 klipper/printer_data/logs/klippy.log.2023-12-16
+ delete mode 100644 klipper/printer_data/logs/klippy.log.2023-12-17
+ delete mode 100644 klipper/printer_data/logs/klippy.log.2023-12-18
+ delete mode 100644 klipper/printer_data/logs/klippy.log.2023-12-19
+ delete mode 100644 klipper/printer_data/logs/klippy.log.2023-12-20
+ delete mode 120000 klipper/printer_data/logs/mainsail-access.log
+ delete mode 120000 klipper/printer_data/logs/mainsail-error.log
+ delete mode 100644 klipper/printer_data/logs/moonraker.log
+ delete mode 100644 klipper/printer_data/logs/moonraker.log.2023-12-19
+ delete mode 100644 klipper/printer_data/logs/moonraker.log.2023-12-20
+ delete mode 100644 klipper/printer_data/logs/octoeverywhere.log
+ delete mode 100644 klipper/printer_data/moonraker.asvc
+ delete mode 100644 klipper/printer_data/octoeverywhere-store/PingPongDataV2.json
+ delete mode 100644 klipper/printer_data/octoeverywhere-store/mDnsCache.json
+ delete mode 100644 klipper/printer_data/octoeverywhere-store/octoeverywhere.secrets
+ delete mode 100644 klipper/printer_data/systemd/crowsnest.env
+ delete mode 100644 klipper/printer_data/systemd/klipper.env
+ delete mode 100644 klipper/printer_data/systemd/moonraker.env
+
+fatal: could not read Password for 'https://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@github.com': No such device or address
+
+Command {update_git_script} finished
+
+Running Command {update_git_script}...:
