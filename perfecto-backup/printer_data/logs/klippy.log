@@ -11090,3 +11090,199 @@ cp: cannot stat '/home/pi/printer_data/config/sounds.cfg': No such file or direc
 
 cp: cannot stat '/home/pi/printer_data/config/macros.cfg': No such file or directory
 
+Stats 4086.0: gcodein=0  mcu: mcu_awake=0.003 mcu_task_avg=0.000015 mcu_task_stddev=0.000010 bytes_write=5630 bytes_read=10470 bytes_retransmit=9 bytes_invalid=0 send_seq=319 receive_seq=319 retransmit_seq=2 srtt=0.001 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=63999072  heater_bed: target=0 temp=23.0 pwm=0.000 sysload=0.02 cputime=12.290 memavail=686812 print_time=0.000 buffer_time=0.000 print_stall=0 extruder: target=0 temp=22.9 pwm=0.000
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+
+Stats 4087.0: gcodein=0  mcu: mcu_awake=0.003 mcu_task_avg=0.000015 mcu_task_stddev=0.000010 bytes_write=5636 bytes_read=10591 bytes_retransmit=9 bytes_invalid=0 send_seq=320 receive_seq=320 retransmit_seq=2 srtt=0.001 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=63999066  heater_bed: target=0 temp=23.0 pwm=0.000 sysload=0.02 cputime=12.319 memavail=688680 print_time=0.000 buffer_time=0.000 print_stall=0 extruder: target=0 temp=22.8 pwm=0.000
+Stats 4088.0: gcodein=0  mcu: mcu_awake=0.003 mcu_task_avg=0.000015 mcu_task_stddev=0.000010 bytes_write=5642 bytes_read=10697 bytes_retransmit=9 bytes_invalid=0 send_seq=321 receive_seq=321 retransmit_seq=2 srtt=0.001 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=63999065  heater_bed: target=0 temp=23.1 pwm=0.000 sysload=0.02 cputime=12.358 memavail=688436 print_time=0.000 buffer_time=0.000 print_stall=0 extruder: target=0 temp=22.9 pwm=0.000
+Stats 4089.0: gcodein=0  mcu: mcu_awake=0.003 mcu_task_avg=0.000015 mcu_task_stddev=0.000010 bytes_write=5648 bytes_read=10818 bytes_retransmit=9 bytes_invalid=0 send_seq=322 receive_seq=322 retransmit_seq=2 srtt=0.001 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=63999065  heater_bed: target=0 temp=23.1 pwm=0.000 sysload=0.42 cputime=12.402 memavail=688492 print_time=0.000 buffer_time=0.000 print_stall=0 extruder: target=0 temp=22.9 pwm=0.000
+Stats 4090.0: gcodein=0  mcu: mcu_awake=0.003 mcu_task_avg=0.000015 mcu_task_stddev=0.000010 bytes_write=5654 bytes_read=10939 bytes_retransmit=9 bytes_invalid=0 send_seq=323 receive_seq=323 retransmit_seq=2 srtt=0.001 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=63999065  heater_bed: target=0 temp=23.0 pwm=0.000 sysload=0.42 cputime=12.447 memavail=688492 print_time=0.000 buffer_time=0.000 print_stall=0 extruder: target=0 temp=22.7 pwm=0.000
+Initialized empty Git repository in /home/pi/klipper-backup/.git/
+
+WARNING: git-filter-branch has a glut of gotchas generating mangled history
+	 rewrites.  Hit Ctrl-C before proceeding to abort, then use an
+	 alternative filtering tool such as 'git filter-repo'
+	 (https://github.com/newren/git-filter-repo/) instead.  See the
+	 filter-branch manual page for more details; to squelch this warning,
+	 set FILTER_BRANCH_SQUELCH_WARNING=1.
+
+Stats 4091.0: gcodein=0  mcu: mcu_awake=0.003 mcu_task_avg=0.000015 mcu_task_stddev=0.000010 bytes_write=5660 bytes_read=11059 bytes_retransmit=9 bytes_invalid=0 send_seq=324 receive_seq=324 retransmit_seq=2 srtt=0.001 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=63999061  heater_bed: target=0 temp=23.1 pwm=0.000 sysload=0.42 cputime=12.486 memavail=688492 print_time=0.000 buffer_time=0.000 print_stall=0 extruder: target=0 temp=22.8 pwm=0.000
+Stats 4092.0: gcodein=0  mcu: mcu_awake=0.003 mcu_task_avg=0.000015 mcu_task_stddev=0.000010 bytes_write=5666 bytes_read=11180 bytes_retransmit=9 bytes_invalid=0 send_seq=325 receive_seq=325 retransmit_seq=2 srtt=0.001 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=63999056  heater_bed: target=0 temp=23.0 pwm=0.000 sysload=0.42 cputime=12.518 memavail=688260 print_time=0.000 buffer_time=0.000 print_stall=0 extruder: target=0 temp=22.8 pwm=0.000
+Stats 4093.0: gcodein=0  mcu: mcu_awake=0.003 mcu_task_avg=0.000015 mcu_task_stddev=0.000010 bytes_write=5672 bytes_read=11301 bytes_retransmit=9 bytes_invalid=0 send_seq=326 receive_seq=326 retransmit_seq=2 srtt=0.001 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=63999058  heater_bed: target=0 temp=23.3 pwm=0.000 sysload=0.42 cputime=12.557 memavail=688260 print_time=0.000 buffer_time=0.000 print_stall=0 extruder: target=0 temp=22.8 pwm=0.000
+Stats 4094.0: gcodein=0  mcu: mcu_awake=0.003 mcu_task_avg=0.000015 mcu_task_stddev=0.000010 bytes_write=5678 bytes_read=11407 bytes_retransmit=9 bytes_invalid=0 send_seq=327 receive_seq=327 retransmit_seq=2 srtt=0.001 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=63999059  heater_bed: target=0 temp=22.9 pwm=0.000 sysload=0.55 cputime=12.600 memavail=688008 print_time=0.000 buffer_time=0.000 print_stall=0 extruder: target=0 temp=22.9 pwm=0.000
+Stats 4095.0: gcodein=0  mcu: mcu_awake=0.003 mcu_task_avg=0.000015 mcu_task_stddev=0.000010 bytes_write=5684 bytes_read=11528 bytes_retransmit=9 bytes_invalid=0 send_seq=328 receive_seq=328 retransmit_seq=2 srtt=0.001 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=63999059  heater_bed: target=0 temp=22.9 pwm=0.000 sysload=0.55 cputime=12.644 memavail=688012 print_time=0.000 buffer_time=0.000 print_stall=0 extruder: target=0 temp=23.2 pwm=0.000
+Stats 4096.0: gcodein=0  mcu: mcu_awake=0.003 mcu_task_avg=0.000015 mcu_task_stddev=0.000010 bytes_write=5690 bytes_read=11663 bytes_retransmit=9 bytes_invalid=0 send_seq=329 receive_seq=329 retransmit_seq=2 srtt=0.001 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=63999060  heater_bed: target=0 temp=23.4 pwm=0.000 sysload=0.55 cputime=12.687 memavail=688012 print_time=0.000 buffer_time=0.000 print_stall=0 extruder: target=0 temp=22.8 pwm=0.000
+Stats 4097.0: gcodein=0  mcu: mcu_awake=0.003 mcu_task_avg=0.000015 mcu_task_stddev=0.000010 bytes_write=5696 bytes_read=11769 bytes_retransmit=9 bytes_invalid=0 send_seq=330 receive_seq=330 retransmit_seq=2 srtt=0.001 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=63999059  heater_bed: target=0 temp=22.9 pwm=0.000 sysload=0.55 cputime=12.730 memavail=688012 print_time=0.000 buffer_time=0.000 print_stall=0 extruder: target=0 temp=22.9 pwm=0.000
+Stats 4098.0: gcodein=0  mcu: mcu_awake=0.003 mcu_task_avg=0.000015 mcu_task_stddev=0.000010 bytes_write=5702 bytes_read=11890 bytes_retransmit=9 bytes_invalid=0 send_seq=331 receive_seq=331 retransmit_seq=2 srtt=0.001 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=63999063  heater_bed: target=0 temp=22.9 pwm=0.000 sysload=0.55 cputime=12.773 memavail=688012 print_time=0.000 buffer_time=0.000 print_stall=0 extruder: target=0 temp=22.8 pwm=0.000
+Stats 4099.0: gcodein=0  mcu: mcu_awake=0.003 mcu_task_avg=0.000015 mcu_task_stddev=0.000010 bytes_write=5708 bytes_read=12011 bytes_retransmit=9 bytes_invalid=0 send_seq=332 receive_seq=332 retransmit_seq=2 srtt=0.001 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=63999062  heater_bed: target=0 temp=23.4 pwm=0.000 sysload=0.50 cputime=12.817 memavail=688012 print_time=0.000 buffer_time=0.000 print_stall=0 extruder: target=0 temp=22.7 pwm=0.000
+Stats 4100.0: gcodein=0  mcu: mcu_awake=0.003 mcu_task_avg=0.000015 mcu_task_stddev=0.000010 bytes_write=5714 bytes_read=12117 bytes_retransmit=9 bytes_invalid=0 send_seq=333 receive_seq=333 retransmit_seq=2 srtt=0.001 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=63999062  heater_bed: target=0 temp=23.0 pwm=0.000 sysload=0.50 cputime=12.860 memavail=688012 print_time=0.000 buffer_time=0.000 print_stall=0 extruder: target=0 temp=23.1 pwm=0.000
+Proceeding with filter-branch...
+
+
+fatal: Needed a single revision
+
+Stats 4101.0: gcodein=0  mcu: mcu_awake=0.003 mcu_task_avg=0.000015 mcu_task_stddev=0.000010 bytes_write=5720 bytes_read=12252 bytes_retransmit=9 bytes_invalid=0 send_seq=334 receive_seq=334 retransmit_seq=2 srtt=0.001 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=63999061  heater_bed: target=0 temp=22.8 pwm=0.000 sysload=0.50 cputime=12.900 memavail=686856 print_time=0.000 buffer_time=0.000 print_stall=0 extruder: target=0 temp=22.9 pwm=0.000
+Stats 4102.0: gcodein=0  mcu: mcu_awake=0.003 mcu_task_avg=0.000015 mcu_task_stddev=0.000010 bytes_write=5726 bytes_read=12373 bytes_retransmit=9 bytes_invalid=0 send_seq=335 receive_seq=335 retransmit_seq=2 srtt=0.001 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=63999059  heater_bed: target=0 temp=23.1 pwm=0.000 sysload=0.50 cputime=12.927 memavail=691636 print_time=0.000 buffer_time=0.000 print_stall=0 extruder: target=0 temp=22.8 pwm=0.000
+Stats 4103.0: gcodein=0  mcu: mcu_awake=0.003 mcu_task_avg=0.000015 mcu_task_stddev=0.000010 bytes_write=5732 bytes_read=12479 bytes_retransmit=9 bytes_invalid=0 send_seq=336 receive_seq=336 retransmit_seq=2 srtt=0.001 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=63999057  heater_bed: target=0 temp=22.9 pwm=0.000 sysload=0.50 cputime=12.956 memavail=691612 print_time=0.000 buffer_time=0.000 print_stall=0 extruder: target=0 temp=22.7 pwm=0.000
+Stats 4104.0: gcodein=0  mcu: mcu_awake=0.003 mcu_task_avg=0.000015 mcu_task_stddev=0.000010 bytes_write=5738 bytes_read=12600 bytes_retransmit=9 bytes_invalid=0 send_seq=337 receive_seq=337 retransmit_seq=2 srtt=0.001 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=63999056  heater_bed: target=0 temp=23.0 pwm=0.000 sysload=0.54 cputime=12.986 memavail=691388 print_time=0.000 buffer_time=0.000 print_stall=0 extruder: target=0 temp=22.8 pwm=0.000
+[master (root-commit) 2016163] New backup from 21-12-23
+ 121 files changed, 912422 insertions(+)
+ create mode 100644 .env.example
+ create mode 100644 .gitignore
+ create mode 100644 README.md
+ create mode 100755 install.sh
+ create mode 100644 klipper/crowsnest.conf
+ create mode 120000 klipper/mainsail.cfg
+ create mode 100644 klipper/moonraker.conf
+ create mode 100644 klipper/printer.cfg
+ create mode 100644 klipper/printer_data/.moonraker.uuid
+ create mode 100644 klipper/printer_data/backup/20231208T230049Z/config/moonraker.conf
+ create mode 120000 klipper/printer_data/comms/klippy.serial
+ create mode 100644 klipper/printer_data/config/.moonraker.conf.bkp
+ create mode 100644 klipper/printer_data/config/Adaptive_Meshing.cfg
+ create mode 120000 klipper/printer_data/config/KAMP
+ create mode 100644 klipper/printer_data/config/KAMP_Settings.cfg
+ create mode 100644 klipper/printer_data/config/Line_Purge.cfg
+ create mode 100644 klipper/printer_data/config/crowsnest.conf
+ create mode 100755 klipper/printer_data/config/klipper.bin
+ create mode 120000 klipper/printer_data/config/mainsail.cfg
+ create mode 100644 klipper/printer_data/config/moonraker.conf
+ create mode 100644 klipper/printer_data/config/moonraker.conf.backup
+ create mode 100644 klipper/printer_data/config/octoeverywhere-system.cfg
+ create mode 100644 klipper/printer_data/config/octoeverywhere.conf
+ create mode 100644 klipper/printer_data/config/printer.cfg
+ create mode 100644 klipper/printer_data/config/start_print.cfg
+ create mode 100644 klipper/printer_data/database/data.mdb
+ create mode 100644 klipper/printer_data/database/lock.mdb
+ create mode 100644 klipper/printer_data/gcodes/.thumbs/JumpyPresent-32x32.png
+ create mode 100644 klipper/printer_data/gcodes/.thumbs/JumpyPresent-400x300.png
+ create mode 100644 klipper/printer_data/gcodes/JumpyPresent.gcode
+ create mode 100644 klipper/printer_data/logs/crowsnest.log
+ create mode 100644 klipper/printer_data/logs/crowsnest.log.2023-12-19
+ create mode 100644 klipper/printer_data/logs/crowsnest.log.2023-12-20
+ create mode 100644 klipper/printer_data/logs/crowsnest.log.2023-12-21
+ create mode 100644 klipper/printer_data/logs/klippy.log
+ create mode 100644 klipper/printer_data/logs/klippy.log.2023-12-16
+ create mode 100644 klipper/printer_data/logs/klippy.log.2023-12-17
+ create mode 100644 klipper/printer_data/logs/klippy.log.2023-12-18
+ create mode 100644 klipper/printer_data/logs/klippy.log.2023-12-19
+ create mode 100644 klipper/printer_data/logs/klippy.log.2023-12-20
+ create mode 120000 klipper/printer_data/logs/mainsail-access.log
+ create mode 120000 klipper/printer_data/logs/mainsail-error.log
+ create mode 100644 klipper/printer_data/logs/moonraker.log
+ create mode 100644 klipper/printer_data/logs/moonraker.log.2023-12-19
+ create mode 100644 klipper/printer_data/logs/moonraker.log.2023-12-20
+ create mode 100644 klipper/printer_data/logs/octoeverywhere.log
+ create mode 100644 klipper/printer_data/moonraker.asvc
+ create mode 100644 klipper/printer_data/octoeverywhere-store/PingPongDataV2.json
+ create mode 100644 klipper/printer_data/octoeverywhere-store/mDnsCache.json
+ create mode 100644 klipper/printer_data/octoeverywhere-store/octoeverywhere.secrets
+ create mode 100644 klipper/printer_data/systemd/crowsnest.env
+ create mode 100644 klipper/printer_data/systemd/klipper.env
+ create mode 100644 klipper/printer_data/systemd/moonraker.env
+ create mode 100644 perfecto-backup/Adaptive_Meshing.cfg
+ create mode 100644 perfecto-backup/config/.moonraker.conf.bkp
+ create mode 100644 perfecto-backup/config/Adaptive_Meshing.cfg
+ create mode 120000 perfecto-backup/config/KAMP
+ create mode 100644 perfecto-backup/config/KAMP_Settings.cfg
+ create mode 100644 perfecto-backup/config/Line_Purge.cfg
+ create mode 100644 perfecto-backup/config/crowsnest.conf
+ create mode 100755 perfecto-backup/config/klipper.bin
+ create mode 120000 perfecto-backup/config/mainsail.cfg
+ create mode 100644 perfecto-backup/config/moonraker.conf
+ create mode 100644 perfecto-backup/config/moonraker.conf.backup
+
+ create mode 100644 perfecto-backup/config/octoeverywhere-system.cfg
+ create mode 100644 perfecto-backup/config/octoeverywhere.conf
+ create mode 100644 perfecto-backup/config/printer.cfg
+ create mode 100644 perfecto-backup/config/shell_command.cfg
+ create mode 100644 perfecto-backup/config/start_print.cfg
+ create mode 100644 perfecto-backup/crowsnest.conf
+ create mode 120000 perfecto-backup/mainsail.cfg
+ create mode 100644 perfecto-backup/moonraker.conf
+ create mode 100644 perfecto-backup/printer.cfg
+ create mode 100644 perfecto-backup/printer_data/.moonraker.uuid
+ create mode 100644 perfecto-backup/printer_data/backup/20231208T230049Z/config/moonraker.conf
+ create mode 120000 perfecto-backup/printer_data/comms/klippy.serial
+ create mode 100644 perfecto-backup/printer_data/config/.moonraker.conf.bkp
+ create mode 100644 perfecto-backup/printer_data/config/Adaptive_Meshing.cfg
+ create mode 120000 perfecto-backup/printer_data/config/KAMP
+ create mode 100644 perfecto-backup/printer_data/config/KAMP_Settings.cfg
+ create mode 100644 perfecto-backup/printer_data/config/Line_Purge.cfg
+ create mode 100644 perfecto-backup/printer_data/config/crowsnest.conf
+ create mode 100755 perfecto-backup/printer_data/config/klipper.bin
+ create mode 120000 perfecto-backup/printer_data/config/mainsail.cfg
+ create mode 100644 perfecto-backup/printer_data/config/moonraker.conf
+ create mode 100644 perfecto-backup/printer_data/config/moonraker.conf.backup
+ create mode 100644 perfecto-backup/printer_data/config/octoeverywhere-system.cfg
+ create mode 100644 perfecto-backup/printer_data/config/octoeverywhere.conf
+ create mode 100644 perfecto-backup/printer_data/config/printer.cfg
+ create mode 100644 perfecto-backup/printer_data/config/shell_command.cfg
+ create mode 100644 perfecto-backup/printer_data/config/start_print.cfg
+ create mode 100644 perfecto-backup/printer_data/database/data.mdb
+ create mode 100644 perfecto-backup/printer_data/database/lock.mdb
+ create mode 100644 perfecto-backup/printer_data/gcodes/.thumbs/JumpyPresent-32x32.png
+ create mode 100644 perfecto-backup/printer_data/gcodes/.thumbs/JumpyPresent-400x300.png
+ create mode 100644 perfecto-backup/printer_data/gcodes/JumpyPresent.gcode
+ create mode 100644 perfecto-backup/printer_data/logs/crowsnest.log
+ create mode 100644 perfecto-backup/printer_data/logs/crowsnest.log.2023-12-19
+ create mode 100644 perfecto-backup/printer_data/logs/crowsnest.log.2023-12-20
+ create mode 100644 perfecto-backup/printer_data/logs/crowsnest.log.2023-12-21
+ create mode 100644 perfecto-backup/printer_data/logs/klippy.log
+ create mode 100644 perfecto-backup/printer_data/logs/klippy.log.2023-12-16
+ create mode 100644 perfecto-backup/printer_data/logs/klippy.log.2023-12-17
+ create mode 100644 perfecto-backup/printer_data/logs/klippy.log.2023-12-18
+ create mode 100644 perfecto-backup/printer_data/logs/klippy.log.2023-12-19
+ create mode 100644 perfecto-backup/printer_data/logs/klippy.log.2023-12-20
+ create mode 120000 perfecto-backup/printer_data/logs/mainsail-access.log
+ create mode 120000 perfecto-backup/printer_data/logs/mainsail-error.log
+ create mode 100644 perfecto-backup/printer_data/logs/moonraker.log
+ create mode 100644 perfecto-backup/printer_data/logs/moonraker.log.2023-12-19
+ create mode 100644 perfecto-backup/printer_data/logs/moonraker.log.2023-12-20
+ create mode 100644 perfecto-backup/printer_data/logs/octoeverywhere.log
+ create mode 100644 perfecto-backup/printer_data/moonraker.asvc
+ create mode 100644 perfecto-backup/printer_data/octoeverywhere-store/PingPongDataV2.json
+ create mode 100644 perfecto-backup/printer_data/octoeverywhere-store/mDnsCache.json
+ create mode 100644 perfecto-backup/printer_data/octoeverywhere-store/octoeverywhere.secrets
+ create mode 100644 perfecto-backup/printer_data/systemd/crowsnest.env
+ create mode 100644 perfecto-backup/printer_data/systemd/klipper.env
+ create mode 100644 perfecto-backup/printer_data/systemd/moonraker.env
+ create mode 100755 script.sh
+ create mode 100644 version
+
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream https://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@github.com/rainpaw/perfecto-backup.git master
+
+
+Command {update_git_script} finished
+
+Running Command {update_git_script}...:
+cp: cannot stat '/home/pi/printer_data/config/timelapse.cfg': No such file or directory
+
+cp: cannot stat '/home/pi/printer_data/config/telegram.conf': No such file or directory
+
+cp: cannot stat '/home/pi/printer_data/config/adxl.cfg': No such file or directory
+
+cp: cannot stat '/home/pi/printer_data/config/pa_cal.cfg': No such file or directory
+
+cp: cannot stat '/home/pi/printer_data/config/GET_PROBE_LIMITS.cfg': No such file or directory
+
+cp: cannot stat '/home/pi/printer_data/config/saved_variables.cfg': No such file or directory
+
+cp: cannot stat '/home/pi/printer_data/config/pa_flow_calibrate.cfg': No such file or directory
+
+cp: cannot stat '/home/pi/printer_data/config/sounds.cfg': No such file or directory
+
+cp: cannot stat '/home/pi/printer_data/config/macros.cfg': No such file or directory
+
