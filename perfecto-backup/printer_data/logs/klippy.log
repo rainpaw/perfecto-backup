@@ -11286,3 +11286,26 @@ cp: cannot stat '/home/pi/printer_data/config/sounds.cfg': No such file or direc
 
 cp: cannot stat '/home/pi/printer_data/config/macros.cfg': No such file or directory
 
+Reinitialized existing Git repository in /home/pi/klipper-backup/.git/
+
+WARNING: git-filter-branch has a glut of gotchas generating mangled history
+	 rewrites.  Hit Ctrl-C before proceeding to abort, then use an
+	 alternative filtering tool such as 'git filter-repo'
+	 (https://github.com/newren/git-filter-repo/) instead.  See the
+	 filter-branch manual page for more details; to squelch this warning,
+	 set FILTER_BRANCH_SQUELCH_WARNING=1.
+
+Proceeding with filter-branch...
+
+
+Cannot rewrite branches: You have unstaged changes.
+
+[main 06cc1c2] New backup from 21-12-23
+ 1 file changed, 196 insertions(+)
+
+To https://github.com/rainpaw/perfecto-backup.git
+   2016163..06cc1c2  main -> main
+
+Command {update_git_script} finished
+
+Running Command {update_git_script}...:
