@@ -13827,3 +13827,1458 @@ Exception: Unknown klippy waiting state. disconnected
 2023-12-21 21:06:07,346 - INFO - Moonraker client setting up default notification hooks
 2023-12-21 21:06:07,847 - INFO - Printer state at socket connect is: standby
 2023-12-21 21:06:07,848 - INFO - Moonraker client sync state: Detected no active print and no ping timers are running, so there's nothing to do.
+2023-12-22 05:22:16,499 - INFO - ##################################
+2023-12-22 05:22:16,502 - INFO - #### OctoEverywhere Starting #####
+2023-12-22 05:22:16,503 - INFO - ##################################
+2023-12-22 05:22:16,512 - INFO - Plugin Version: 2.10.5
+2023-12-22 05:22:16,514 - INFO - Our existing update config file include was found in the moonraker config.
+2023-12-22 05:22:16,515 - INFO - Existing update config file found with the correct file contents.
+2023-12-22 05:22:16,557 - INFO - mDns Cache file loaded. Cached Entries Found: 0
+2023-12-22 05:22:16,561 - INFO - Setting up relay with frontend port 80
+2023-12-22 05:22:16,566 - INFO - OctoPingPong stats loaded from file.
+2023-12-22 05:22:16,575 - INFO - MoonrakerApiRouter using bound to moonraker at 0.0.0.0:7125
+2023-12-22 05:22:16,577 - INFO - Attempting to use lowest latency server: wss://nyc.octoeverywhere.com/octoclientws
+2023-12-22 05:22:16,579 - INFO - Attempting to talk to OctoEverywhere, server con wss://nyc.octoeverywhere.com/octoclientws[1] wsId:1969557360
+2023-12-22 05:22:16,899 - INFO - Websocket connected
+2023-12-22 05:22:16,900 - INFO - Connected To OctoEverywhere, server con wss://nyc.octoeverywhere.com/octoclientws[1]. Starting handshake...
+2023-12-22 05:22:17,358 - INFO - Handshake complete, server con wss://nyc.octoeverywhere.com/octoclientws[1], successfully connected to OctoEverywhere!
+2023-12-22 05:22:17,358 - INFO - Primary Connection To OctoEverywhere Established - We Are Ready To Go!
+2023-12-22 05:22:17,359 - INFO - Starting Moonraker connection client.
+2023-12-22 05:22:17,360 - INFO - Moonraker client starting websocket connection thread.
+2023-12-22 05:22:17,365 - INFO - Connecting to moonraker: ws://0.0.0.0:7125/websocket
+2023-12-22 05:22:17,368 - ERROR - Exception rased from moonraker client websocket connection. The connection will be closed.; ConnectionRefusedError Exception: [Errno 111] Connection refused; NoneType: None
+
+2023-12-22 05:22:17,368 - ERROR - [Errno 111] Connection refused - goodbye
+2023-12-22 05:22:17,370 - INFO - Moonraker websocket connection closed.
+2023-12-22 05:22:17,371 - INFO - Moonraker client websocket connection lost. We will try to restart it soon.
+2023-12-22 05:22:19,378 - INFO - Connecting to moonraker: ws://0.0.0.0:7125/websocket
+2023-12-22 05:22:19,394 - INFO - Websocket connected
+2023-12-22 05:22:19,396 - INFO - Moonraker client websocket opened.
+2023-12-22 05:22:19,397 - INFO - Moonraker client waiting for klippy ready...
+2023-12-22 05:22:19,398 - INFO - Authenticating with moonraker...
+2023-12-22 05:22:19,445 - INFO - Moonraker client waiting for klippy ready...
+2023-12-22 05:22:19,449 - INFO - Moonraker client got klippy state 'startup', waiting for ready...
+2023-12-22 22:04:52,834 - INFO - Moonraker client received notify_klippy_disconnected notification, so we will restart our client connection.
+2023-12-22 22:04:52,835 - INFO - Moonraker client websocket shutdown called.
+2023-12-22 22:04:52,838 - INFO - Moonraker client websocket shutdown complete.
+2023-12-22 22:04:52,840 - INFO - Moonraker websocket connection closed.
+2023-12-22 22:04:52,841 - INFO - Moonraker client websocket connection lost. We will try to restart it soon.
+2023-12-22 22:04:54,291 - INFO - Moonraker client - tired to send a websocket message when the socket wasn't open.
+2023-12-22 22:04:54,292 - INFO - Moonraker client failed to send JsonRPC request server.info
+2023-12-22 22:04:54,292 - ERROR - Moonraker client failed to send klippy ready query message. 99990001 - No active websocket connected.
+2023-12-22 22:04:54,301 - ERROR - Moonraker client exception in klippy waiting logic.; Exception Exception: Error returned from klippy state query. 99990001 - No active websocket connected.; Traceback (most recent call last):
+  File "/home/pi/octoeverywhere/moonraker_octoeverywhere/moonrakerclient.py", line 557, in _AfterOpenReadyWaiter
+    raise Exception("Error returned from klippy state query. "+ str(result.GetLoggingErrorStr()))
+Exception: Error returned from klippy state query. 99990001 - No active websocket connected.
+
+2023-12-22 22:04:54,302 - INFO - Moonraker client websocket shutdown called.
+2023-12-22 22:04:54,303 - INFO - Moonraker client websocket shutdown complete.
+2023-12-22 22:04:54,848 - INFO - Connecting to moonraker: ws://0.0.0.0:7125/websocket
+2023-12-22 22:04:54,857 - INFO - Websocket connected
+2023-12-22 22:04:54,858 - INFO - Moonraker client websocket opened.
+2023-12-22 22:04:54,859 - INFO - Moonraker client waiting for klippy ready...
+2023-12-22 22:04:54,860 - INFO - Authenticating with moonraker...
+2023-12-22 22:04:54,896 - INFO - Moonraker client waiting for klippy ready...
+2023-12-22 22:04:54,901 - INFO - Moonraker client got klippy state 'startup', waiting for ready...
+2023-12-22 22:05:00,920 - INFO - Moonraker client klippy state is ready. Moonraker connection is ready and stable.
+2023-12-22 22:05:00,921 - INFO - Moonraker client setting up default notification hooks
+2023-12-22 22:05:01,341 - INFO - Printer state at socket connect is: standby
+2023-12-22 22:05:01,342 - INFO - Moonraker client sync state: Detected no active print and no ping timers are running, so there's nothing to do.
+2023-12-22 22:14:53,944 - INFO - Gadget is now watching!
+2023-12-22 22:14:53,951 - INFO - FileMetadataCache updated for file [Tiles.gcode]; est time: 7775.0, size: 3341, filament usage: 8737
+2023-12-22 22:14:53,953 - INFO - Gadget has stopped watching!
+2023-12-22 22:14:53,953 - INFO - RepeatTimer thread exit
+2023-12-22 22:14:53,953 - INFO - RepeatTimer thread exit
+2023-12-22 22:14:53,956 - INFO - Gadget is now watching!
+2023-12-22 22:14:53,956 - INFO - RepeatTimer thread exit
+2023-12-22 22:14:53,958 - INFO - New print started; PrintId: HmF6OjIentZLyXjIGtvWTwS9Ee1bpenGHAeYjkoqlp50SQPonk26Pemyk3nC file:Tiles.gcode size:3341 filament:8737
+2023-12-22 22:14:54,766 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 22:14:54,771 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 22:14:55,093 - INFO - NotificationsHandler successfully sent 'resume'
+2023-12-22 22:14:55,106 - INFO - NotificationsHandler successfully sent 'started'
+2023-12-22 22:15:24,274 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-22 22:15:54,601 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-22 22:16:24,943 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-22 22:16:55,288 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-22 22:17:25,625 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-22 22:17:55,953 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-22 22:18:26,287 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-22 22:18:56,626 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-22 22:19:26,954 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-22 22:19:57,287 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-22 22:20:27,622 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-22 22:20:57,956 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-22 22:21:28,296 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-22 22:21:58,618 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-22 22:22:28,951 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-22 22:22:59,286 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-22 22:23:29,674 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-22 22:24:00,008 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-22 22:24:13,044 - INFO - First layer timer is done. Stopping.
+2023-12-22 22:24:13,045 - INFO - RepeatTimer thread exit
+2023-12-22 22:24:13,853 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 22:24:13,857 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 22:24:14,214 - INFO - NotificationsHandler successfully sent 'thirdlayerdone'
+2023-12-22 22:24:14,231 - INFO - NotificationsHandler successfully sent 'firstlayerdone'
+2023-12-22 22:24:30,875 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 22:26:31,737 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 22:28:32,619 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 22:30:33,483 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 22:32:34,360 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 22:34:35,247 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 22:36:36,126 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 22:38:36,993 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 22:40:37,846 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 22:42:38,710 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 22:44:39,570 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 22:46:40,477 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 22:46:55,536 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 22:46:55,855 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-22 22:48:41,390 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 22:50:42,243 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 22:52:43,177 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 22:54:44,067 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 22:56:44,967 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 22:58:45,836 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:00:46,778 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:01:35,435 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:01:35,786 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-22 23:02:47,665 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:04:48,587 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:06:49,496 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:08:50,330 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:10:51,212 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:12:52,077 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:14:52,932 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:14:54,689 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:14:55,007 - INFO - NotificationsHandler successfully sent 'timerprogress'
+2023-12-22 23:16:53,836 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:17:47,533 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:17:47,828 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-22 23:18:54,751 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:20:55,650 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:22:56,538 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:24:57,455 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:26:58,361 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:28:59,269 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:30:50,345 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:30:50,649 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-22 23:31:00,128 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:33:01,035 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:35:01,912 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:37:02,824 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:39:03,791 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:41:04,671 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:41:10,686 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:41:11,192 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-22 23:43:05,537 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:45:06,435 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:47:07,338 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:49:08,241 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:51:09,157 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:51:32,522 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:51:32,807 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-22 23:53:10,129 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:55:11,042 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:57:11,968 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-22 23:59:12,862 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:01:13,739 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:02:01,903 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:02:02,182 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-23 00:03:14,622 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:05:15,483 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:07:16,387 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:09:17,301 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:11:18,209 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:13:10,797 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:13:11,122 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-23 00:13:19,074 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:14:54,892 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:14:55,159 - INFO - NotificationsHandler successfully sent 'timerprogress'
+2023-12-23 00:15:19,967 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:17:20,843 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:19:21,706 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:21:22,548 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:23:23,448 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:24:00,547 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:24:00,825 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-23 00:25:24,332 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:27:25,188 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:29:26,047 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:31:26,925 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:33:27,813 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:35:28,688 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:37:28,001 - INFO - Starting FinalSnap
+2023-12-23 00:37:29,035 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:37:29,038 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:37:29,533 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:37:30,075 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:37:30,080 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:37:31,112 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:37:31,115 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:37:32,145 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:37:32,148 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:37:33,176 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:37:33,179 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:37:34,210 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:37:34,214 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:37:35,241 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:37:35,244 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:37:36,275 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:37:36,278 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:37:37,305 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:37:37,308 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:37:38,335 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:37:38,339 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:37:39,366 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:37:39,369 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:37:40,396 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:37:40,399 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:37:41,427 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:37:41,431 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:37:42,458 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:37:42,461 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:37:43,488 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:37:43,491 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:37:44,520 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:37:44,524 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:37:45,557 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:37:45,561 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:37:46,591 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:37:46,595 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:37:47,624 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:37:47,628 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:37:48,656 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:37:48,659 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:37:49,689 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:37:49,693 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:37:50,724 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:37:50,727 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:37:51,758 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:37:51,761 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:37:52,792 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:37:52,795 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:37:53,828 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:37:53,831 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:37:54,863 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:37:54,866 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:37:55,896 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:37:55,899 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:37:56,926 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:37:56,929 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:37:57,956 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:37:57,960 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:37:58,990 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:37:58,994 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:38:00,024 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:38:00,027 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:38:01,054 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:38:01,057 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:38:02,083 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:38:02,086 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:38:03,120 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:38:03,123 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:38:04,154 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:38:04,160 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:38:05,188 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:38:05,192 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 00:38:05,372 - INFO - Gadget has stopped watching!
+2023-12-23 00:38:05,373 - INFO - RepeatTimer thread exit
+2023-12-23 00:38:05,376 - INFO - RepeatTimer thread exit
+2023-12-23 00:38:05,876 - INFO - Stopping final snap but there's no snapshot to use.
+2023-12-23 00:38:05,876 - INFO - RepeatTimer thread exit
+2023-12-23 00:38:05,906 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 00:38:06,234 - INFO - NotificationsHandler successfully sent 'done'
+2023-12-23 01:57:29,154 - INFO - FileMetadataCache updated for file [Tiles-S.gcode]; est time: 7422.0, size: 2638, filament usage: 8414
+2023-12-23 01:57:29,158 - INFO - Gadget is now watching!
+2023-12-23 01:57:29,163 - INFO - New print started; PrintId: 8IK8Txig3tuM9tg75MbBguPdBDkprqHkaPmU5nXOaPExnIlZ5rmQdoTOccHT file:Tiles-S.gcode size:2638 filament:8414
+2023-12-23 01:57:29,919 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 01:57:30,221 - INFO - NotificationsHandler successfully sent 'started'
+2023-12-23 01:57:59,476 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 01:58:29,808 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 01:59:00,147 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 01:59:30,481 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 02:00:00,810 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 02:00:31,153 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 02:01:01,496 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 02:01:31,836 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 02:02:02,179 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 02:02:32,518 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 02:03:02,843 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 02:03:33,191 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 02:04:03,526 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 02:04:33,862 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 02:05:04,196 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 02:05:34,531 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 02:06:04,877 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 02:06:35,271 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 02:07:05,598 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 02:07:10,363 - INFO - First layer timer is done. Stopping.
+2023-12-23 02:07:10,364 - INFO - RepeatTimer thread exit
+2023-12-23 02:07:11,164 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 02:07:11,169 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 02:07:11,508 - INFO - NotificationsHandler successfully sent 'thirdlayerdone'
+2023-12-23 02:07:11,851 - INFO - NotificationsHandler successfully sent 'firstlayerdone'
+2023-12-23 02:07:36,468 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 02:09:37,319 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 02:11:38,154 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 02:13:39,021 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 02:15:39,920 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 02:17:40,836 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 02:19:41,701 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 02:21:42,555 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 02:23:43,436 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 02:25:44,297 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 02:27:04,056 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 02:27:04,328 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-23 02:27:45,207 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 02:29:46,127 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 02:31:47,056 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 02:33:47,943 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 02:35:48,844 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 02:37:49,752 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 02:38:23,349 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 02:38:23,656 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-23 02:39:50,625 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 02:41:51,534 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 02:43:52,392 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 02:45:53,383 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 02:47:54,323 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 02:49:20,601 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 02:49:20,890 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-23 02:49:55,210 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 02:51:56,082 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 02:53:56,979 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 02:55:57,861 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 02:57:29,928 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 02:57:30,352 - INFO - NotificationsHandler successfully sent 'timerprogress'
+2023-12-23 02:57:58,761 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 02:59:59,631 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:00:26,627 - ERROR - OctoEverywhere Ws error: ping/pong timed out
+2023-12-23 03:00:26,628 - ERROR - ping/pong timed out - goodbye
+2023-12-23 03:00:26,633 - INFO - Service websocket closed.
+2023-12-23 03:00:26,634 - INFO - Disconnected from OctoEverywhere, server con wss://nyc.octoeverywhere.com/octoclientws[1]
+2023-12-23 03:00:26,635 - INFO - Closing all open web stream sockets (0)
+2023-12-23 03:00:26,637 - INFO - Sleeping for 10 seconds before trying again.
+2023-12-23 03:00:36,643 - INFO - Attempting to use lowest latency server: wss://nyc.octoeverywhere.com/octoclientws
+2023-12-23 03:00:36,647 - INFO - Attempting to talk to OctoEverywhere, server con wss://nyc.octoeverywhere.com/octoclientws[2] wsId:1940499304
+2023-12-23 03:00:36,936 - INFO - Websocket connected
+2023-12-23 03:00:36,938 - INFO - Connected To OctoEverywhere, server con wss://nyc.octoeverywhere.com/octoclientws[2]. Starting handshake...
+2023-12-23 03:00:37,042 - INFO - Handshake complete, server con wss://nyc.octoeverywhere.com/octoclientws[2], successfully connected to OctoEverywhere!
+2023-12-23 03:00:37,042 - INFO - Primary Connection To OctoEverywhere Established - We Are Ready To Go!
+2023-12-23 03:02:00,516 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:04:01,412 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:04:52,052 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:04:52,337 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-23 03:06:02,269 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:08:03,144 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:10:04,013 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:12:04,926 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:14:05,809 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:16:06,684 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:18:07,571 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:18:09,324 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:18:09,606 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-23 03:20:08,447 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:22:09,347 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:24:10,275 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:26:11,159 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:28:12,050 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:29:50,369 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:29:50,670 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-23 03:30:12,949 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:32:13,814 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:34:14,696 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:36:15,584 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:38:16,458 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:40:17,315 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:41:00,722 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:41:01,163 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-23 03:42:18,226 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:44:19,097 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:46:19,990 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:48:20,874 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:50:21,742 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:51:44,748 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:51:45,046 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-23 03:52:22,630 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:54:23,497 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:55:00,202 - ERROR - OctoEverywhere Ws error: Connection timed out
+2023-12-23 03:55:00,206 - ERROR - Connection timed out - goodbye
+2023-12-23 03:55:00,209 - INFO - Service websocket closed.
+2023-12-23 03:55:00,221 - INFO - Disconnected from OctoEverywhere, server con wss://nyc.octoeverywhere.com/octoclientws[2]
+2023-12-23 03:55:00,225 - INFO - Closing all open web stream sockets (0)
+2023-12-23 03:55:00,225 - INFO - Sleeping for 6 seconds before trying again.
+2023-12-23 03:55:06,232 - INFO - Attempting to use lowest latency server: wss://nyc.octoeverywhere.com/octoclientws
+2023-12-23 03:55:06,234 - INFO - Attempting to talk to OctoEverywhere, server con wss://nyc.octoeverywhere.com/octoclientws[3] wsId:1969628952
+2023-12-23 03:55:06,534 - INFO - Websocket connected
+2023-12-23 03:55:06,535 - INFO - Connected To OctoEverywhere, server con wss://nyc.octoeverywhere.com/octoclientws[3]. Starting handshake...
+2023-12-23 03:55:06,647 - INFO - Handshake complete, server con wss://nyc.octoeverywhere.com/octoclientws[3], successfully connected to OctoEverywhere!
+2023-12-23 03:55:06,647 - INFO - Primary Connection To OctoEverywhere Established - We Are Ready To Go!
+2023-12-23 03:56:24,393 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:57:30,139 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 03:57:30,445 - INFO - NotificationsHandler successfully sent 'timerprogress'
+2023-12-23 03:58:25,319 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:00:26,182 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:02:27,046 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:02:28,057 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:02:28,485 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-23 04:04:27,923 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:06:28,775 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:08:29,648 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:10:30,518 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:12:31,380 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:14:32,245 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:14:40,738 - INFO - Starting FinalSnap
+2023-12-23 04:14:41,769 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:14:41,773 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 04:14:42,805 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:14:42,808 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 04:14:43,839 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:14:43,843 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 04:14:44,871 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:14:44,875 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 04:14:45,906 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:14:45,909 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 04:14:46,937 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:14:46,940 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 04:14:47,965 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:14:47,968 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 04:14:49,002 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:14:49,006 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 04:14:50,036 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:14:50,039 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 04:14:51,064 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:14:51,067 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 04:14:52,093 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:14:52,096 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 04:14:53,122 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:14:53,125 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 04:14:54,156 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:14:54,160 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 04:14:55,186 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:14:55,190 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 04:14:56,219 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:14:56,223 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 04:14:57,252 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:14:57,255 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 04:14:58,284 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:14:58,289 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 04:14:59,322 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:14:59,325 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 04:15:00,354 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:15:00,360 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 04:15:01,385 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:15:01,389 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 04:15:02,415 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:15:02,418 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 04:15:03,444 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:15:03,448 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 04:15:04,478 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:15:04,482 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 04:15:05,512 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:15:05,515 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 04:15:06,545 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:15:06,548 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 04:15:07,583 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:15:07,589 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 04:15:08,618 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:15:08,621 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 04:15:09,651 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:15:09,655 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 04:15:10,684 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:15:10,687 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 04:15:11,715 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:15:11,718 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 04:15:11,839 - INFO - Gadget has stopped watching!
+2023-12-23 04:15:11,840 - INFO - RepeatTimer thread exit
+2023-12-23 04:15:11,841 - INFO - RepeatTimer thread exit
+2023-12-23 04:15:12,341 - INFO - Stopping final snap but there's no snapshot to use.
+2023-12-23 04:15:12,341 - INFO - RepeatTimer thread exit
+2023-12-23 04:15:12,358 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 04:15:17,899 - INFO - NotificationsHandler successfully sent 'done'
+2023-12-23 04:15:56,222 - INFO - ##################################
+2023-12-23 04:15:56,228 - INFO - #### OctoEverywhere Starting #####
+2023-12-23 04:15:56,229 - INFO - ##################################
+2023-12-23 04:15:56,236 - INFO - Plugin Version: 2.10.5
+2023-12-23 04:15:56,238 - INFO - Our existing update config file include was found in the moonraker config.
+2023-12-23 04:15:56,240 - INFO - Existing update config file found with the correct file contents.
+2023-12-23 04:15:56,273 - INFO - mDns Cache file loaded. Cached Entries Found: 0
+2023-12-23 04:15:56,277 - INFO - Setting up relay with frontend port 80
+2023-12-23 04:15:56,283 - INFO - OctoPingPong stats loaded from file.
+2023-12-23 04:15:56,292 - INFO - MoonrakerApiRouter using bound to moonraker at 0.0.0.0:7125
+2023-12-23 04:15:56,294 - INFO - Attempting to use lowest latency server: wss://nyc.octoeverywhere.com/octoclientws
+2023-12-23 04:15:56,295 - INFO - Attempting to talk to OctoEverywhere, server con wss://nyc.octoeverywhere.com/octoclientws[1] wsId:1970122608
+2023-12-23 04:15:56,620 - INFO - Websocket connected
+2023-12-23 04:15:56,622 - INFO - Connected To OctoEverywhere, server con wss://nyc.octoeverywhere.com/octoclientws[1]. Starting handshake...
+2023-12-23 04:15:57,149 - INFO - Handshake complete, server con wss://nyc.octoeverywhere.com/octoclientws[1], successfully connected to OctoEverywhere!
+2023-12-23 04:15:57,150 - INFO - Primary Connection To OctoEverywhere Established - We Are Ready To Go!
+2023-12-23 04:15:57,150 - INFO - Starting Moonraker connection client.
+2023-12-23 04:15:57,152 - INFO - Moonraker client starting websocket connection thread.
+2023-12-23 04:15:57,156 - INFO - Connecting to moonraker: ws://0.0.0.0:7125/websocket
+2023-12-23 04:15:57,159 - ERROR - Exception rased from moonraker client websocket connection. The connection will be closed.; ConnectionRefusedError Exception: [Errno 111] Connection refused; NoneType: None
+
+2023-12-23 04:15:57,160 - ERROR - [Errno 111] Connection refused - goodbye
+2023-12-23 04:15:57,162 - INFO - Moonraker websocket connection closed.
+2023-12-23 04:15:57,162 - INFO - Moonraker client websocket connection lost. We will try to restart it soon.
+2023-12-23 04:15:59,169 - INFO - Connecting to moonraker: ws://0.0.0.0:7125/websocket
+2023-12-23 04:15:59,181 - INFO - Websocket connected
+2023-12-23 04:15:59,184 - INFO - Moonraker client websocket opened.
+2023-12-23 04:15:59,185 - INFO - Moonraker client waiting for klippy ready...
+2023-12-23 04:15:59,186 - INFO - Authenticating with moonraker...
+2023-12-23 04:15:59,217 - INFO - Moonraker client waiting for klippy ready...
+2023-12-23 04:15:59,221 - INFO - Moonraker client got klippy state 'startup', waiting for ready...
+2023-12-23 04:16:01,229 - INFO - Moonraker client klippy state is ready. Moonraker connection is ready and stable.
+2023-12-23 04:16:01,231 - INFO - Moonraker client setting up default notification hooks
+2023-12-23 04:16:02,004 - INFO - Printer state at socket connect is: standby
+2023-12-23 04:16:02,005 - INFO - Moonraker client sync state: Detected no active print and no ping timers are running, so there's nothing to do.
+2023-12-23 15:08:48,700 - INFO - FileMetadataCache updated for file [WatchStand.gcode]; est time: 8343.0, size: 7306, filament usage: 8913
+2023-12-23 15:08:48,704 - INFO - Gadget is now watching!
+2023-12-23 15:08:48,708 - INFO - New print started; PrintId: Y9c0laCuTW6duHbh8Ttwr8bOLQ9Xt7ntaHng2RODnkql2gjzp7hZUoAqSgrI file:WatchStand.gcode size:7306 filament:8913
+2023-12-23 15:08:49,478 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 15:08:49,772 - INFO - NotificationsHandler successfully sent 'started'
+2023-12-23 15:09:19,013 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 15:09:49,344 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 15:10:19,681 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 15:10:50,024 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 15:11:20,368 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 15:11:50,711 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 15:12:21,057 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 15:12:51,391 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 15:13:21,739 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 15:13:52,079 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 15:14:22,416 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 15:14:52,754 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 15:15:23,094 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 15:15:53,426 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 15:16:23,758 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 15:16:54,093 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 15:17:24,444 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 15:17:54,784 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 15:17:57,540 - INFO - First layer timer is done. Stopping.
+2023-12-23 15:17:57,542 - INFO - RepeatTimer thread exit
+2023-12-23 15:17:58,343 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 15:17:58,351 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 15:17:58,643 - INFO - NotificationsHandler successfully sent 'thirdlayerdone'
+2023-12-23 15:17:58,657 - INFO - NotificationsHandler successfully sent 'firstlayerdone'
+2023-12-23 15:18:25,646 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 15:20:26,534 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 15:22:27,394 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 15:24:28,329 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 15:26:29,252 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 15:28:30,131 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 15:29:44,930 - INFO - Updating server latencies...
+2023-12-23 15:29:54,415 - INFO - Ping Pong Stats: Default:[nyc,64.50966426304409], Lowest:[nyc,64.50966426304409] Use Low Latency Enabled: True
+2023-12-23 15:30:31,017 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 15:32:32,010 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 15:34:32,962 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 15:36:16,691 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 15:36:16,985 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-23 15:36:33,768 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 15:38:34,781 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 15:40:35,821 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 15:42:36,825 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 15:44:37,792 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 15:46:38,631 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 15:48:39,532 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 15:50:24,862 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 15:50:25,162 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-23 15:50:40,440 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 15:52:41,372 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 15:54:42,344 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 15:56:43,335 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 15:58:44,316 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:00:45,287 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:02:46,253 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:04:47,219 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:04:48,223 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:04:48,622 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-23 16:06:48,262 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:08:49,314 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:08:49,320 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:08:49,595 - INFO - NotificationsHandler successfully sent 'timerprogress'
+2023-12-23 16:10:50,335 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:12:51,280 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:14:52,114 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:16:53,100 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:16:58,613 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:16:58,901 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-23 16:18:54,051 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:20:54,966 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:22:55,813 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:24:56,693 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:26:57,530 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:28:58,412 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:30:59,282 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:33:00,169 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:35:01,088 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:35:07,858 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:35:08,144 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-23 16:37:01,961 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:39:02,864 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:41:03,778 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:43:04,654 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:45:05,527 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:47:06,419 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:49:07,344 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:51:08,233 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:53:09,112 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:53:36,945 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:53:37,231 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-23 16:55:09,988 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:57:10,920 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 16:59:11,902 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:01:12,813 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:03:13,779 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:05:14,670 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:05:56,573 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:05:57,172 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-23 17:07:15,568 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:08:49,408 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:08:49,689 - INFO - NotificationsHandler successfully sent 'timerprogress'
+2023-12-23 17:09:16,499 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:11:17,489 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:13:18,391 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:15:19,344 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:17:20,220 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:18:36,481 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:18:36,769 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-23 17:19:21,144 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:21:22,046 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:23:22,933 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:25:23,817 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:27:24,685 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:29:25,624 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:30:55,246 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:30:55,514 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-23 17:31:26,598 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:33:27,561 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:35:28,487 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:37:29,414 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:39:30,301 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:41:31,182 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:02,514 - INFO - Starting FinalSnap
+2023-12-23 17:42:03,539 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:03,543 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:04,572 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:04,575 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:05,605 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:05,609 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:06,640 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:06,643 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:07,672 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:07,676 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:08,705 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:08,708 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:09,736 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:09,739 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:10,772 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:10,775 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:11,805 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:11,808 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:12,839 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:12,843 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:13,870 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:13,873 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:14,900 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:14,906 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:15,932 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:15,937 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:16,963 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:16,968 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:17,994 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:18,000 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:19,027 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:19,033 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:20,064 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:20,069 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:21,097 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:21,102 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:22,131 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:22,135 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:23,165 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:23,170 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:24,197 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:24,202 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:25,232 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:25,236 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:26,265 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:26,268 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:27,294 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:27,298 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:28,328 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:28,332 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:29,368 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:29,371 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:30,404 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:30,409 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:31,438 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:31,445 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:32,473 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:32,478 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:33,504 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:33,508 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:34,533 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:34,538 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:35,564 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:35,568 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:36,594 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:36,598 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:37,627 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:37,633 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:38,663 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:38,668 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:39,699 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:39,705 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:40,731 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:40,737 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:41,764 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:41,770 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:42,800 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:42,802 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:43,834 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:43,838 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:44,868 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:44,872 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:45,903 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:45,907 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:46,935 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:46,938 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:47,967 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:47,969 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:48,996 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:48,999 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:50,024 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:50,027 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:51,053 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:51,056 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:52,086 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:52,089 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:53,119 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:53,123 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:54,153 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:54,156 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:55,186 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:55,189 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:56,217 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:56,221 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:57,250 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:57,257 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 17:42:57,473 - INFO - Gadget has stopped watching!
+2023-12-23 17:42:57,474 - INFO - RepeatTimer thread exit
+2023-12-23 17:42:57,480 - INFO - RepeatTimer thread exit
+2023-12-23 17:42:57,978 - INFO - Stopping final snap but there's no snapshot to use.
+2023-12-23 17:42:57,981 - INFO - RepeatTimer thread exit
+2023-12-23 17:42:58,012 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 17:42:58,445 - INFO - NotificationsHandler successfully sent 'done'
+2023-12-23 18:28:01,184 - INFO - FileMetadataCache updated for file [WatchStand-Bigger.gcode]; est time: 12350.0, size: 9050, filament usage: 13721
+2023-12-23 18:28:01,187 - INFO - Gadget is now watching!
+2023-12-23 18:28:01,189 - INFO - New print started; PrintId: GEHdKnUr7ZFuEWiC5DnwLaBfzEBeqdwbEBihnFy9fKiE5a2lfrbqFiGSTgfO file:WatchStand-Bigger.gcode size:9050 filament:13721
+2023-12-23 18:28:01,957 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 18:28:02,433 - INFO - NotificationsHandler successfully sent 'started'
+2023-12-23 18:28:31,508 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 18:29:01,839 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 18:29:32,179 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 18:30:02,514 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 18:30:32,853 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 18:31:03,208 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 18:31:33,558 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 18:32:03,903 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 18:32:34,306 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 18:33:04,642 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 18:33:34,979 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 18:34:05,314 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 18:34:35,656 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 18:35:05,988 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 18:35:36,327 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 18:36:06,670 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-23 18:36:37,553 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 18:38:38,411 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 18:40:39,263 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 18:42:40,112 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 18:43:16,466 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 18:43:16,760 - INFO - NotificationsHandler successfully sent 'firstlayerdone'
+2023-12-23 18:44:41,012 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 18:46:41,957 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 18:48:42,889 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 18:50:31,018 - INFO - First layer timer is done. Stopping.
+2023-12-23 18:50:31,023 - INFO - RepeatTimer thread exit
+2023-12-23 18:50:31,548 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 18:50:31,842 - INFO - NotificationsHandler successfully sent 'thirdlayerdone'
+2023-12-23 18:50:43,840 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 18:52:44,780 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 18:54:45,762 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 18:56:46,750 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 18:58:47,794 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:00:48,811 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:02:49,849 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:04:03,870 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:04:04,135 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-23 19:04:50,792 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:06:51,752 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:08:52,751 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:10:53,681 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:12:54,655 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:14:55,614 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:16:56,618 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:18:57,572 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:20:58,497 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:22:59,408 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:24:07,433 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:24:07,723 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-23 19:25:00,347 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:27:01,244 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:28:01,764 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:28:02,075 - INFO - NotificationsHandler successfully sent 'timerprogress'
+2023-12-23 19:29:02,243 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:31:03,245 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:33:04,271 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:35:05,193 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:37:06,172 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:39:07,202 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:41:08,215 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:43:09,257 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:44:19,758 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:44:20,049 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-23 19:45:10,224 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:47:11,201 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:49:12,246 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:51:13,121 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:53:14,054 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:55:14,962 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:57:15,851 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 19:59:16,763 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:01:17,705 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:02:55,044 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:02:55,354 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-23 20:03:18,648 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:05:19,570 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:06:04,590 - ERROR - OctoEverywhere Ws error: ping/pong timed out
+2023-12-23 20:06:04,590 - ERROR - ping/pong timed out - goodbye
+2023-12-23 20:06:04,593 - INFO - Service websocket closed.
+2023-12-23 20:06:04,594 - INFO - Disconnected from OctoEverywhere, server con wss://nyc.octoeverywhere.com/octoclientws[1]
+2023-12-23 20:06:04,594 - INFO - Closing all open web stream sockets (0)
+2023-12-23 20:06:04,595 - INFO - Sleeping for 8 seconds before trying again.
+2023-12-23 20:06:12,605 - INFO - Attempting to use lowest latency server: wss://nyc.octoeverywhere.com/octoclientws
+2023-12-23 20:06:12,608 - INFO - Attempting to talk to OctoEverywhere, server con wss://nyc.octoeverywhere.com/octoclientws[2] wsId:1950879648
+2023-12-23 20:06:12,908 - INFO - Websocket connected
+2023-12-23 20:06:12,910 - INFO - Connected To OctoEverywhere, server con wss://nyc.octoeverywhere.com/octoclientws[2]. Starting handshake...
+2023-12-23 20:06:13,024 - INFO - Handshake complete, server con wss://nyc.octoeverywhere.com/octoclientws[2], successfully connected to OctoEverywhere!
+2023-12-23 20:06:13,025 - INFO - Primary Connection To OctoEverywhere Established - We Are Ready To Go!
+2023-12-23 20:07:20,437 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:09:21,288 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:11:22,213 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:13:23,079 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:15:23,971 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:17:24,861 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:19:25,759 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:21:26,621 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:23:27,486 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:25:28,382 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:27:29,296 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:28:01,887 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:28:02,172 - INFO - NotificationsHandler successfully sent 'timerprogress'
+2023-12-23 20:28:26,462 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:28:26,766 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-23 20:29:30,165 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:31:31,028 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:33:31,911 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:35:32,826 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:37:33,724 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:39:34,578 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:41:35,471 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:43:36,353 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:45:37,232 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:47:38,094 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:49:38,945 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:51:39,874 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:53:40,749 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:54:35,933 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:54:36,230 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-23 20:55:41,610 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:57:42,509 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 20:59:43,404 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 21:01:44,358 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 21:03:45,317 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 21:05:46,238 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 21:07:47,129 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 21:09:48,017 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 21:11:48,872 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 21:13:49,766 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 21:13:51,517 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 21:13:51,818 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-23 21:15:50,705 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 21:17:51,640 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 21:19:52,548 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 21:21:53,547 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 21:23:54,435 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 21:25:55,328 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 21:27:56,233 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 21:28:01,998 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 21:28:02,428 - INFO - NotificationsHandler successfully sent 'timerprogress'
+2023-12-23 21:29:57,128 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 21:31:49,477 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 21:31:49,768 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-23 21:31:58,001 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 21:33:58,889 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 21:35:59,724 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 21:38:00,651 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 21:40:01,555 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 21:42:02,469 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 21:44:03,381 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 21:46:04,281 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 21:48:05,168 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 21:49:34,982 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 21:49:35,272 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-23 21:50:06,079 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 21:52:07,013 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 21:54:07,974 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 21:56:08,892 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 21:58:09,863 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:00:10,759 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:02:11,598 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:04:12,549 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:06:13,479 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:07:34,950 - INFO - Starting FinalSnap
+2023-12-23 22:07:35,976 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:07:35,979 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:07:37,009 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:07:37,012 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:07:38,042 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:07:38,046 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:07:39,077 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:07:39,080 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:07:40,111 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:07:40,114 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:07:41,138 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:07:41,141 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:07:42,169 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:07:42,172 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:07:43,198 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:07:43,201 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:07:44,227 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:07:44,230 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:07:45,263 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:07:45,267 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:07:46,293 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:07:46,296 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:07:47,322 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:07:47,326 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:07:48,356 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:07:48,359 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:07:49,382 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:07:49,385 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:07:50,411 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:07:50,414 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:07:51,441 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:07:51,444 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:07:52,474 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:07:52,477 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:07:53,507 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:07:53,511 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:07:54,541 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:07:54,545 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:07:55,574 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:07:55,577 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:07:56,602 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:07:56,606 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:07:57,629 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:07:57,631 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:07:58,664 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:07:58,667 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:07:59,697 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:07:59,700 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:08:00,731 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:08:00,734 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:08:01,764 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:08:01,768 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:08:02,799 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:08:02,802 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:08:03,830 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:08:03,832 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:08:04,862 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:08:04,865 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:08:05,892 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:08:05,894 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:08:06,920 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:08:06,923 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:08:07,951 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:08:07,954 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:08:08,981 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:08:08,983 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:08:10,013 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:08:10,016 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:08:11,046 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:08:11,049 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:08:12,085 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:08:12,089 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:08:13,116 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:08:13,120 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:08:14,149 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:08:14,152 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:08:14,362 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:08:15,180 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:08:15,183 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:08:16,209 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:08:16,212 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:08:17,239 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:08:17,241 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:08:18,269 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:08:18,272 - INFO - FinalSnap failed to get a snapshot
+2023-12-23 22:08:18,339 - INFO - Gadget has stopped watching!
+2023-12-23 22:08:18,339 - INFO - RepeatTimer thread exit
+2023-12-23 22:08:18,342 - INFO - RepeatTimer thread exit
+2023-12-23 22:08:18,842 - INFO - Stopping final snap but there's no snapshot to use.
+2023-12-23 22:08:18,844 - INFO - RepeatTimer thread exit
+2023-12-23 22:08:18,870 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-23 22:08:19,173 - INFO - NotificationsHandler successfully sent 'done'
+2023-12-23 23:38:07,600 - INFO - ##################################
+2023-12-23 23:38:07,613 - INFO - #### OctoEverywhere Starting #####
+2023-12-23 23:38:07,614 - INFO - ##################################
+2023-12-23 23:38:07,620 - INFO - Plugin Version: 2.10.5
+2023-12-23 23:38:07,622 - INFO - Our existing update config file include was found in the moonraker config.
+2023-12-23 23:38:07,623 - INFO - Existing update config file found with the correct file contents.
+2023-12-23 23:38:07,682 - INFO - mDns Cache file loaded. Cached Entries Found: 0
+2023-12-23 23:38:07,684 - INFO - Setting up relay with frontend port 80
+2023-12-23 23:38:07,696 - INFO - OctoPingPong stats loaded from file.
+2023-12-23 23:38:07,706 - INFO - MoonrakerApiRouter using bound to moonraker at 0.0.0.0:7125
+2023-12-23 23:38:07,708 - INFO - Attempting to use lowest latency server: wss://nyc.octoeverywhere.com/octoclientws
+2023-12-23 23:38:07,710 - INFO - Attempting to talk to OctoEverywhere, server con wss://nyc.octoeverywhere.com/octoclientws[1] wsId:1969221488
+2023-12-23 23:38:08,041 - INFO - Websocket connected
+2023-12-23 23:38:08,043 - INFO - Connected To OctoEverywhere, server con wss://nyc.octoeverywhere.com/octoclientws[1]. Starting handshake...
+2023-12-23 23:38:08,531 - INFO - Handshake complete, server con wss://nyc.octoeverywhere.com/octoclientws[1], successfully connected to OctoEverywhere!
+2023-12-23 23:38:08,532 - INFO - Primary Connection To OctoEverywhere Established - We Are Ready To Go!
+2023-12-23 23:38:08,532 - INFO - Starting Moonraker connection client.
+2023-12-23 23:38:08,534 - INFO - Moonraker client starting websocket connection thread.
+2023-12-23 23:38:08,538 - INFO - Connecting to moonraker: ws://0.0.0.0:7125/websocket
+2023-12-23 23:38:08,541 - ERROR - Exception rased from moonraker client websocket connection. The connection will be closed.; ConnectionRefusedError Exception: [Errno 111] Connection refused; NoneType: None
+
+2023-12-23 23:38:08,542 - ERROR - [Errno 111] Connection refused - goodbye
+2023-12-23 23:38:08,543 - INFO - Moonraker websocket connection closed.
+2023-12-23 23:38:08,544 - INFO - Moonraker client websocket connection lost. We will try to restart it soon.
+2023-12-23 23:38:10,551 - INFO - Connecting to moonraker: ws://0.0.0.0:7125/websocket
+2023-12-23 23:38:10,600 - INFO - Websocket connected
+2023-12-23 23:38:10,603 - INFO - Moonraker client websocket opened.
+2023-12-23 23:38:10,606 - INFO - Moonraker client waiting for klippy ready...
+2023-12-23 23:38:10,607 - INFO - Authenticating with moonraker...
+2023-12-23 23:38:10,716 - INFO - Moonraker client waiting for klippy ready...
+2023-12-23 23:38:10,720 - INFO - Moonraker client got klippy state 'startup', waiting for ready...
+2023-12-23 23:38:14,734 - INFO - Moonraker client klippy state is ready. Moonraker connection is ready and stable.
+2023-12-23 23:38:14,735 - INFO - Moonraker client setting up default notification hooks
+2023-12-23 23:38:15,245 - INFO - Printer state at socket connect is: standby
+2023-12-23 23:38:15,246 - INFO - Moonraker client sync state: Detected no active print and no ping timers are running, so there's nothing to do.
+2023-12-26 23:28:38,514 - INFO - Server con wss://nyc.octoeverywhere.com/octoclientws[1] IS past it's RunFor time 2 days, 23:50:30.806936 and IS past it's time since last user activity 2 days, 23:50:29.983796
+2023-12-26 23:28:38,516 - INFO - Server con wss://nyc.octoeverywhere.com/octoclientws[1] RunFor is complete and will be disconnected.
+2023-12-26 23:28:38,517 - INFO - Closing all open web stream sockets (0)
+2023-12-26 23:28:38,518 - INFO - OctoServerCon websocket close start. IsPrimary?:True; wsId:1969221488
+2023-12-26 23:28:38,570 - INFO - Service websocket closed.
+2023-12-26 23:28:38,572 - INFO - Disconnected from OctoEverywhere, server con wss://nyc.octoeverywhere.com/octoclientws[1]
+2023-12-26 23:28:38,586 - INFO - OctoServerCon disconnect complete.
+2023-12-26 23:28:38,587 - INFO - Closing all open web stream sockets (0)
+2023-12-26 23:28:38,588 - INFO - Server con wss://nyc.octoeverywhere.com/octoclientws[1] IS past it's RunFor time 2 days, 23:50:30.881255 and IS past it's time since last user activity 2 days, 23:50:30.058092
+2023-12-26 23:28:38,590 - INFO - Server con wss://nyc.octoeverywhere.com/octoclientws[1] RunFor is complete, disconnected, and exiting the main thread.
+2023-12-26 23:28:38,590 - INFO - RepeatTimer thread exit
+2023-12-26 23:28:38,593 - INFO - Attempting to use lowest latency server: wss://nyc.octoeverywhere.com/octoclientws
+2023-12-26 23:28:38,594 - INFO - Attempting to talk to OctoEverywhere, server con wss://nyc.octoeverywhere.com/octoclientws[1] wsId:1969221464
+2023-12-26 23:28:38,899 - INFO - Websocket connected
+2023-12-26 23:28:38,901 - INFO - Connected To OctoEverywhere, server con wss://nyc.octoeverywhere.com/octoclientws[1]. Starting handshake...
+2023-12-26 23:28:39,031 - INFO - Handshake complete, server con wss://nyc.octoeverywhere.com/octoclientws[1], successfully connected to OctoEverywhere!
+2023-12-26 23:28:39,032 - INFO - Primary Connection To OctoEverywhere Established - We Are Ready To Go!
+2023-12-26 23:42:16,671 - INFO - FileMetadataCache updated for file [DT+TP.gcode]; est time: 21696.0, size: 9114, filament usage: 25184
+2023-12-26 23:42:16,673 - INFO - Gadget is now watching!
+2023-12-26 23:42:16,676 - INFO - New print started; PrintId: dcY2Sp78eTjyNIM3vqQAeDI11iN2il3y0jLTxKiQLkfJSZKWSeDCEebNpNck file:DT+TP.gcode size:9114 filament:25184
+2023-12-26 23:42:17,471 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-26 23:42:17,764 - INFO - NotificationsHandler successfully sent 'started'
+2023-12-26 23:42:46,990 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-26 23:43:17,323 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-26 23:43:47,670 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-26 23:44:18,013 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-26 23:44:48,345 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-26 23:45:18,686 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-26 23:45:49,023 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-26 23:46:19,373 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-26 23:46:49,766 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-26 23:47:20,099 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-26 23:47:50,433 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-26 23:48:20,783 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-26 23:48:51,120 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-26 23:49:21,455 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-26 23:49:51,791 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-26 23:50:22,129 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-26 23:50:52,468 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-26 23:51:22,803 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-26 23:51:53,126 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-26 23:52:23,457 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-26 23:52:53,793 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-26 23:53:24,122 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-26 23:53:54,450 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-26 23:54:24,777 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-26 23:54:55,111 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-26 23:55:25,448 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-26 23:55:55,788 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-26 23:56:26,143 - INFO - Waiting to predict with Gadget because the printer is warming up.
+2023-12-26 23:56:46,431 - INFO - First layer timer is done. Stopping.
+2023-12-26 23:56:46,433 - INFO - RepeatTimer thread exit
+2023-12-26 23:56:47,240 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-26 23:56:47,244 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-26 23:56:47,541 - INFO - NotificationsHandler successfully sent 'firstlayerdone'
+2023-12-26 23:56:47,561 - INFO - NotificationsHandler successfully sent 'thirdlayerdone'
+2023-12-26 23:56:56,988 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-26 23:58:57,832 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 00:00:58,690 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 00:02:59,582 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 00:05:00,446 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 00:07:01,335 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 00:09:02,184 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 00:11:03,005 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 00:13:03,837 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 00:15:04,668 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 00:17:05,540 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 00:19:06,408 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 00:21:07,281 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 00:23:08,157 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 00:25:08,964 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 00:27:09,866 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 00:29:10,716 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 00:31:11,633 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 00:33:12,510 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 00:35:13,398 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 00:37:14,321 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 00:39:15,200 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 00:41:16,054 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 00:42:17,250 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 00:42:17,530 - INFO - NotificationsHandler successfully sent 'timerprogress'
+2023-12-27 00:43:16,959 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 00:45:17,810 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 00:47:18,674 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 00:49:19,552 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 00:51:20,433 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 00:53:21,305 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 00:53:22,307 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 00:53:22,616 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-27 00:55:22,169 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 00:57:23,042 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 00:59:23,951 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 01:01:24,808 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 01:03:25,707 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 01:05:26,599 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 01:07:27,480 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 01:08:54,494 - ERROR - OctoEverywhere Ws error: Connection to remote host was lost.
+2023-12-27 01:08:54,495 - ERROR - Connection to remote host was lost. - goodbye
+2023-12-27 01:08:54,499 - INFO - Service websocket closed.
+2023-12-27 01:08:54,511 - INFO - Disconnected from OctoEverywhere, server con wss://nyc.octoeverywhere.com/octoclientws[1]
+2023-12-27 01:08:54,514 - INFO - Closing all open web stream sockets (0)
+2023-12-27 01:08:54,515 - INFO - Sleeping for 7 seconds before trying again.
+2023-12-27 01:09:01,524 - INFO - Attempting to use lowest latency server: wss://nyc.octoeverywhere.com/octoclientws
+2023-12-27 01:09:01,525 - INFO - Attempting to talk to OctoEverywhere, server con wss://nyc.octoeverywhere.com/octoclientws[2] wsId:1949866328
+2023-12-27 01:09:02,690 - INFO - Websocket connected
+2023-12-27 01:09:02,692 - INFO - Connected To OctoEverywhere, server con wss://nyc.octoeverywhere.com/octoclientws[2]. Starting handshake...
+2023-12-27 01:09:08,624 - INFO - Handshake complete, server con wss://nyc.octoeverywhere.com/octoclientws[2], successfully connected to OctoEverywhere!
+2023-12-27 01:09:08,625 - INFO - Primary Connection To OctoEverywhere Established - We Are Ready To Go!
+2023-12-27 01:09:28,353 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 01:11:29,298 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 01:13:30,287 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 01:15:31,184 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 01:17:32,080 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 01:19:32,949 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 01:21:33,827 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 01:23:34,697 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 01:25:35,627 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 01:27:36,519 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 01:29:37,425 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 01:31:38,344 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 01:33:39,277 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 01:35:40,183 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 01:37:41,122 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 01:38:35,060 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 01:38:35,569 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-27 01:39:42,026 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 01:41:42,918 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 01:42:17,277 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 01:42:17,573 - INFO - NotificationsHandler successfully sent 'timerprogress'
+2023-12-27 01:43:43,784 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 01:45:44,627 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 01:47:45,504 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 01:49:46,385 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 01:51:47,319 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 01:53:48,215 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 01:55:49,104 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 01:57:49,986 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 01:59:50,822 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 02:01:51,676 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 02:03:52,571 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 02:05:53,442 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 02:07:54,343 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 02:09:55,234 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 02:11:56,133 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 02:13:56,998 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 02:15:57,889 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 02:17:58,750 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 02:19:59,623 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 02:22:00,486 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 02:24:01,343 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 02:26:02,208 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 02:28:03,098 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 02:30:03,991 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 02:31:27,723 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 02:31:28,022 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-27 02:32:04,839 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 02:34:05,697 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 02:36:06,609 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 02:38:07,497 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 02:40:08,386 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 02:42:09,244 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 02:42:17,522 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 02:42:17,809 - INFO - NotificationsHandler successfully sent 'timerprogress'
+2023-12-27 02:44:10,119 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 02:46:10,996 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 02:48:11,844 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 02:50:12,756 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 02:52:13,637 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 02:54:14,521 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 02:56:15,396 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 02:58:16,320 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 03:00:17,246 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 03:02:18,157 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 03:04:19,098 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 03:06:20,002 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 03:08:20,976 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 03:10:21,899 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 03:12:22,845 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 03:12:42,681 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 03:12:42,966 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-27 03:14:23,809 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 03:16:24,702 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 03:18:25,625 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 03:20:26,522 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 03:22:27,393 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 03:24:28,330 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 03:26:29,288 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 03:28:30,211 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 03:30:31,084 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 03:32:32,020 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 03:34:32,958 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 03:36:33,954 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 03:38:34,872 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 03:39:53,450 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 03:39:53,768 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-27 03:40:35,833 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 03:42:17,653 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 03:42:17,931 - INFO - NotificationsHandler successfully sent 'timerprogress'
+2023-12-27 03:42:36,723 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 03:44:37,669 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 03:46:38,608 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 03:48:39,542 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 03:50:40,447 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 03:52:41,332 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 03:54:42,237 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 03:56:43,173 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 03:58:44,121 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 04:00:45,045 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 04:02:45,950 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 04:04:46,917 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 04:06:47,813 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 04:07:21,422 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 04:07:21,725 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-27 04:08:48,699 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 04:10:49,615 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 04:12:50,521 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 04:14:51,537 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 04:16:52,442 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 04:18:53,325 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 04:20:54,193 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 04:22:55,077 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 04:24:55,945 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 04:26:56,840 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 04:28:57,724 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 04:30:58,610 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 04:32:59,492 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 04:35:00,378 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 04:36:21,881 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 04:36:22,175 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-27 04:37:01,271 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 04:39:02,158 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 04:41:03,041 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 04:42:17,781 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 04:42:18,062 - INFO - NotificationsHandler successfully sent 'timerprogress'
+2023-12-27 04:43:03,914 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 04:45:04,832 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 04:47:05,702 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 04:49:06,560 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 04:51:07,432 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 04:53:08,322 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 04:55:09,180 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 04:57:10,090 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 04:59:10,991 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 05:01:11,866 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 05:03:12,720 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 05:05:13,627 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 05:06:06,014 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 05:06:06,300 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-27 05:07:14,468 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 05:09:15,328 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 05:11:16,190 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 05:13:17,083 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 05:15:17,950 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 05:17:18,840 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 05:19:19,702 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 05:21:20,586 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 05:23:21,450 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 05:25:22,350 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 05:27:23,234 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 05:29:24,084 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 05:31:24,932 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 05:33:25,778 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 05:35:26,633 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 05:37:27,509 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 05:39:28,360 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 05:40:28,547 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 05:40:28,864 - INFO - NotificationsHandler successfully sent 'progress'
+2023-12-27 05:41:29,233 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 05:42:17,885 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 05:42:18,350 - INFO - NotificationsHandler successfully sent 'timerprogress'
+2023-12-27 05:43:30,086 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 05:45:30,961 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 05:47:31,804 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 05:49:32,683 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 05:51:33,514 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 05:53:34,363 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 05:55:35,207 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 05:57:36,067 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 05:59:36,895 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 06:01:37,743 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 06:03:38,658 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 06:05:39,545 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 06:07:40,452 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 06:09:41,405 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 06:09:58,417 - INFO - Starting FinalSnap
+2023-12-27 06:09:59,445 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 06:09:59,451 - INFO - FinalSnap failed to get a snapshot
+2023-12-27 06:10:00,479 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 06:10:00,483 - INFO - FinalSnap failed to get a snapshot
+2023-12-27 06:10:01,510 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 06:10:01,514 - INFO - FinalSnap failed to get a snapshot
+2023-12-27 06:10:02,540 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 06:10:02,544 - INFO - FinalSnap failed to get a snapshot
+2023-12-27 06:10:03,574 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 06:10:03,578 - INFO - FinalSnap failed to get a snapshot
+2023-12-27 06:10:04,602 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 06:10:04,605 - INFO - FinalSnap failed to get a snapshot
+2023-12-27 06:10:05,631 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 06:10:05,635 - INFO - FinalSnap failed to get a snapshot
+2023-12-27 06:10:06,661 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 06:10:06,665 - INFO - FinalSnap failed to get a snapshot
+2023-12-27 06:10:07,697 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 06:10:07,701 - INFO - FinalSnap failed to get a snapshot
+2023-12-27 06:10:08,729 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 06:10:08,733 - INFO - FinalSnap failed to get a snapshot
+2023-12-27 06:10:09,765 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 06:10:09,768 - INFO - FinalSnap failed to get a snapshot
+2023-12-27 06:10:10,800 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 06:10:10,804 - INFO - FinalSnap failed to get a snapshot
+2023-12-27 06:10:11,835 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 06:10:11,838 - INFO - FinalSnap failed to get a snapshot
+2023-12-27 06:10:12,865 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 06:10:12,868 - INFO - FinalSnap failed to get a snapshot
+2023-12-27 06:10:13,897 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 06:10:13,900 - INFO - FinalSnap failed to get a snapshot
+2023-12-27 06:10:14,927 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 06:10:14,931 - INFO - FinalSnap failed to get a snapshot
+2023-12-27 06:10:15,957 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 06:10:15,961 - INFO - FinalSnap failed to get a snapshot
+2023-12-27 06:10:16,991 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 06:10:16,995 - INFO - FinalSnap failed to get a snapshot
+2023-12-27 06:10:18,025 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 06:10:18,028 - INFO - FinalSnap failed to get a snapshot
+2023-12-27 06:10:18,472 - INFO - Gadget has stopped watching!
+2023-12-27 06:10:18,473 - INFO - RepeatTimer thread exit
+2023-12-27 06:10:18,479 - INFO - RepeatTimer thread exit
+2023-12-27 06:10:18,975 - INFO - Stopping final snap but there's no snapshot to use.
+2023-12-27 06:10:18,975 - INFO - RepeatTimer thread exit
+2023-12-27 06:10:19,004 - INFO - Snapshot fallback failed due to the http call having a bad status: 502
+2023-12-27 06:10:19,324 - INFO - NotificationsHandler successfully sent 'done'
+2023-12-27 11:09:02,635 - ERROR - OctoEverywhere Ws error: ping/pong timed out
+2023-12-27 11:09:02,638 - ERROR - ping/pong timed out - goodbye
+2023-12-27 11:09:02,641 - INFO - Service websocket closed.
+2023-12-27 11:09:02,642 - INFO - Disconnected from OctoEverywhere, server con wss://nyc.octoeverywhere.com/octoclientws[2]
+2023-12-27 11:09:02,643 - INFO - Closing all open web stream sockets (0)
+2023-12-27 11:09:02,644 - INFO - Sleeping for 5 seconds before trying again.
+2023-12-27 11:09:07,650 - INFO - Attempting to use lowest latency server: wss://nyc.octoeverywhere.com/octoclientws
+2023-12-27 11:09:07,660 - INFO - Attempting to talk to OctoEverywhere, server con wss://nyc.octoeverywhere.com/octoclientws[3] wsId:1950069856
+2023-12-27 11:09:07,977 - INFO - Websocket connected
+2023-12-27 11:09:07,978 - INFO - Connected To OctoEverywhere, server con wss://nyc.octoeverywhere.com/octoclientws[3]. Starting handshake...
+2023-12-27 11:09:08,086 - INFO - Handshake complete, server con wss://nyc.octoeverywhere.com/octoclientws[3], successfully connected to OctoEverywhere!
+2023-12-27 11:09:08,087 - INFO - Primary Connection To OctoEverywhere Established - We Are Ready To Go!
+2023-12-27 15:09:55,893 - INFO - Moonraker client received notify_klippy_disconnected notification, so we will restart our client connection.
+2023-12-27 15:09:55,894 - INFO - Moonraker client websocket shutdown called.
+2023-12-27 15:09:55,898 - INFO - Moonraker client websocket shutdown complete.
+2023-12-27 15:09:55,900 - INFO - Ignoring KlippyDisconnectedOrShutdown notification because we aren't tracking a print.
+2023-12-27 15:09:55,902 - INFO - Moonraker websocket connection closed.
+2023-12-27 15:09:55,903 - INFO - Moonraker client websocket connection lost. We will try to restart it soon.
+2023-12-27 15:09:57,910 - INFO - Connecting to moonraker: ws://0.0.0.0:7125/websocket
+2023-12-27 15:09:57,920 - INFO - Websocket connected
+2023-12-27 15:09:57,922 - INFO - Moonraker client websocket opened.
+2023-12-27 15:09:57,923 - INFO - Moonraker client waiting for klippy ready...
+2023-12-27 15:09:57,924 - INFO - Authenticating with moonraker...
+2023-12-27 15:09:57,956 - INFO - Moonraker client waiting for klippy ready...
+2023-12-27 15:09:57,960 - INFO - Moonraker client got klippy state 'startup', waiting for ready...
+2023-12-27 15:10:01,975 - INFO - Moonraker client klippy state is ready. Moonraker connection is ready and stable.
+2023-12-27 15:10:01,976 - INFO - Moonraker client setting up default notification hooks
+2023-12-27 15:10:02,291 - INFO - Printer state at socket connect is: standby
+2023-12-27 15:10:02,292 - INFO - Moonraker client sync state: Detected no active print and no ping timers are running, so there's nothing to do.
+2023-12-27 15:10:25,085 - INFO - Moonraker client received notify_klippy_disconnected notification, so we will restart our client connection.
+2023-12-27 15:10:25,086 - INFO - Moonraker client websocket shutdown called.
+2023-12-27 15:10:25,090 - INFO - Moonraker client websocket shutdown complete.
+2023-12-27 15:10:25,091 - INFO - Ignoring KlippyDisconnectedOrShutdown notification because we aren't tracking a print.
+2023-12-27 15:10:25,093 - INFO - Moonraker websocket connection closed.
+2023-12-27 15:10:25,094 - INFO - Moonraker client websocket connection lost. We will try to restart it soon.
+2023-12-27 15:10:27,101 - INFO - Connecting to moonraker: ws://0.0.0.0:7125/websocket
+2023-12-27 15:10:27,113 - INFO - Websocket connected
+2023-12-27 15:10:27,115 - INFO - Moonraker client websocket opened.
+2023-12-27 15:10:27,116 - INFO - Moonraker client waiting for klippy ready...
+2023-12-27 15:10:27,117 - INFO - Authenticating with moonraker...
+2023-12-27 15:10:27,146 - INFO - Moonraker client waiting for klippy ready...
+2023-12-27 15:10:27,151 - INFO - Moonraker client got klippy state 'startup', waiting for ready...
+2023-12-27 15:10:31,168 - INFO - Moonraker client klippy state is ready. Moonraker connection is ready and stable.
+2023-12-27 15:10:31,169 - INFO - Moonraker client setting up default notification hooks
+2023-12-27 15:10:31,687 - INFO - Printer state at socket connect is: standby
+2023-12-27 15:10:31,687 - INFO - Moonraker client sync state: Detected no active print and no ping timers are running, so there's nothing to do.
+2023-12-27 15:10:48,699 - INFO - Moonraker client received notify_klippy_disconnected notification, so we will restart our client connection.
+2023-12-27 15:10:48,701 - INFO - Moonraker client websocket shutdown called.
+2023-12-27 15:10:48,705 - INFO - Moonraker client websocket shutdown complete.
+2023-12-27 15:10:48,708 - INFO - Ignoring KlippyDisconnectedOrShutdown notification because we aren't tracking a print.
+2023-12-27 15:10:48,718 - INFO - Moonraker websocket connection closed.
+2023-12-27 15:10:48,719 - INFO - Moonraker client websocket connection lost. We will try to restart it soon.
+2023-12-27 15:10:50,726 - INFO - Connecting to moonraker: ws://0.0.0.0:7125/websocket
+2023-12-27 15:10:50,736 - INFO - Websocket connected
+2023-12-27 15:10:50,737 - INFO - Moonraker client websocket opened.
+2023-12-27 15:10:50,738 - INFO - Moonraker client waiting for klippy ready...
+2023-12-27 15:10:50,740 - INFO - Authenticating with moonraker...
+2023-12-27 15:10:50,766 - INFO - Moonraker client waiting for klippy ready...
+2023-12-27 15:10:50,771 - INFO - Moonraker client got klippy state 'startup', waiting for ready...
+2023-12-27 15:11:04,079 - INFO - Moonraker client received notify_klippy_disconnected notification, so we will restart our client connection.
+2023-12-27 15:11:04,080 - INFO - Moonraker client websocket shutdown called.
+2023-12-27 15:11:04,082 - INFO - Moonraker client websocket shutdown complete.
+2023-12-27 15:11:04,083 - INFO - Moonraker websocket connection closed.
+2023-12-27 15:11:04,084 - INFO - Moonraker client websocket connection lost. We will try to restart it soon.
+2023-12-27 15:11:04,819 - INFO - Moonraker client - tired to send a websocket message when the socket wasn't open.
+2023-12-27 15:11:04,820 - INFO - Moonraker client failed to send JsonRPC request server.info
+2023-12-27 15:11:04,821 - ERROR - Moonraker client failed to send klippy ready query message. 99990001 - No active websocket connected.
+2023-12-27 15:11:04,832 - ERROR - Moonraker client exception in klippy waiting logic.; Exception Exception: Error returned from klippy state query. 99990001 - No active websocket connected.; Traceback (most recent call last):
+  File "/home/pi/octoeverywhere/moonraker_octoeverywhere/moonrakerclient.py", line 557, in _AfterOpenReadyWaiter
+    raise Exception("Error returned from klippy state query. "+ str(result.GetLoggingErrorStr()))
+Exception: Error returned from klippy state query. 99990001 - No active websocket connected.
+
+2023-12-27 15:11:04,833 - INFO - Moonraker client websocket shutdown called.
+2023-12-27 15:11:04,834 - INFO - Moonraker client websocket shutdown complete.
+2023-12-27 15:11:06,091 - INFO - Connecting to moonraker: ws://0.0.0.0:7125/websocket
+2023-12-27 15:11:06,102 - INFO - Websocket connected
+2023-12-27 15:11:06,105 - INFO - Moonraker client websocket opened.
+2023-12-27 15:11:06,106 - INFO - Moonraker client waiting for klippy ready...
+2023-12-27 15:11:06,107 - INFO - Authenticating with moonraker...
+2023-12-27 15:11:06,135 - INFO - Moonraker client waiting for klippy ready...
+2023-12-27 15:11:06,139 - INFO - Moonraker client got klippy state 'startup', waiting for ready...
+2023-12-27 15:11:10,153 - INFO - Moonraker client klippy state is ready. Moonraker connection is ready and stable.
+2023-12-27 15:11:10,154 - INFO - Moonraker client setting up default notification hooks
+2023-12-27 15:11:10,424 - INFO - Printer state at socket connect is: standby
+2023-12-27 15:11:10,425 - INFO - Moonraker client sync state: Detected no active print and no ping timers are running, so there's nothing to do.
