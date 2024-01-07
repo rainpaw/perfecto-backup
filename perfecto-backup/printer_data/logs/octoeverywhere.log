@@ -21350,3 +21350,20 @@ Exception: Unknown klippy waiting state. disconnected
 2024-01-07 19:07:06,477 - INFO - Connected To OctoEverywhere, server con wss://nyc.octoeverywhere.com/octoclientws[2]. Starting handshake...
 2024-01-07 19:07:20,245 - INFO - Handshake complete, server con wss://nyc.octoeverywhere.com/octoclientws[2], successfully connected to OctoEverywhere!
 2024-01-07 19:07:20,246 - INFO - Primary Connection To OctoEverywhere Established - We Are Ready To Go!
+2024-01-07 19:58:19,086 - INFO - Moonraker client received notify_klippy_disconnected notification, so we will restart our client connection.
+2024-01-07 19:58:19,088 - INFO - Moonraker client websocket shutdown called.
+2024-01-07 19:58:19,095 - INFO - Moonraker client websocket shutdown complete.
+2024-01-07 19:58:19,096 - INFO - Ignoring KlippyDisconnectedOrShutdown notification because we aren't tracking a print.
+2024-01-07 19:58:19,098 - INFO - Moonraker websocket connection closed.
+2024-01-07 19:58:19,100 - INFO - Moonraker client websocket connection lost. We will try to restart it soon.
+2024-01-07 19:58:21,107 - INFO - Connecting to moonraker: ws://0.0.0.0:7125/websocket
+2024-01-07 19:58:21,118 - INFO - Websocket connected
+2024-01-07 19:58:21,120 - INFO - Moonraker client websocket opened.
+2024-01-07 19:58:21,121 - INFO - Moonraker client waiting for klippy ready...
+2024-01-07 19:58:21,123 - INFO - Authenticating with moonraker...
+2024-01-07 19:58:21,160 - INFO - Moonraker client waiting for klippy ready...
+2024-01-07 19:58:21,164 - INFO - Moonraker client got klippy state 'startup', waiting for ready...
+2024-01-07 19:58:25,190 - INFO - Moonraker client klippy state is ready. Moonraker connection is ready and stable.
+2024-01-07 19:58:25,192 - INFO - Moonraker client setting up default notification hooks
+2024-01-07 19:58:25,709 - INFO - Printer state at socket connect is: standby
+2024-01-07 19:58:25,710 - INFO - Moonraker client sync state: Detected no active print and no ping timers are running, so there's nothing to do.
